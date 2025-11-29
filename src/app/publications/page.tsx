@@ -12,7 +12,7 @@ const publicationsData = [
     year: 2025,
     title: "Analyzing and predicting ventilation coefficient over India using long-term reanalysis datasets and hybrid machine learning approach",
     authors: "Govande, A., Attada, R., Shukla, K.K. et al",
-    journal: "Theor Appl Climatol",
+    journal: "Theoretical and Applied Climatology",
     doi: "https://doi.org/10.1007/s00704-025-05845-w"
   },
   {
