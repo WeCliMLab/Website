@@ -175,10 +175,7 @@ export default function OpportunitiesPage() {
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                                 <span> JRF/Lecturership or GATE .</span>
                             </li>
-                            {/* <li className="flex items-start gap-2 text-sm text-slate-600">
-                                <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                                <span>IISER Mohali Summer Research Program.</span>
-                            </li> */}
+                            
                         </ul>
                     </div>
 
@@ -217,7 +214,7 @@ export default function OpportunitiesPage() {
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                                <span>IISER Mohali Summer Research Program.</span>
+                                <span> BS-MS can apply for IISER Mohali Summer Research Program.</span>
                             </li>
                           
                         </ul>
