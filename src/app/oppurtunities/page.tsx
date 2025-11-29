@@ -163,8 +163,8 @@ export default function OpportunitiesPage() {
                     <div className="h-14 w-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-4">
                         <Clock className="h-8 w-8" />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-900">Short-Term</h2>
-                    <p className="text-purple-600 font-medium">Project Positions </p>
+                    <h2 className="text-2xl font-bold text-slate-900"> Project Positions </h2>
+                    {/* <p className="text-purple-600 font-medium">Project Positions </p> */}
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
