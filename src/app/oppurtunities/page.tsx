@@ -16,9 +16,9 @@ export default function OpportunitiesPage() {
   
   // --- DATA: Disciplines (Tag Cloud) ---
   const disciplines = [
-    "Atmospheric Sciences", "Artificial Intelligence", "Physics", 
-    "Data Sciences", "Mathematics", "Computer Science", 
-    "Remote Sensing", "Geophysics", "Meteorology"
+    "Atmospheric Sciences", "Oceanic Sciences", "Physics", "Geophysics", "Mathematics", "Computer Science", "Data Sciences", "Remote Sensing", "Artificial Intelligence"  
+       
+      
   ];
 
   return (
