@@ -97,7 +97,7 @@ export default function OpportunitiesPage() {
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                                <span>Valid <b>CSIR/UGC-JRF</b> <b>GATE</b> or <b>DST-Inspire</b> fellowship.</span>
+                                <span>Valid <b>CSIR/UGC-JRF</b>, <b>GATE</b> or <b>DST-Inspire</b> fellowship.</span>
                             </li>
                         </ul>
                     </div>
