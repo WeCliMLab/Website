@@ -155,7 +155,7 @@ export default function OpportunitiesPage() {
                 </div>
             </div>
 
-            {/* --- SHORT TERM / INTERN CARD --- */}
+            {/* --- Project */}
             <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-16 bg-purple-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
                 
@@ -164,21 +164,62 @@ export default function OpportunitiesPage() {
                         <Clock className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">Short-Term</h2>
-                    <p className="text-purple-600 font-medium">Project Positions & Interns</p>
+                    <p className="text-purple-600 font-medium">Project Positions </p>
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
                     <div>
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Programs</h4>
+                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Eligibility</h4>
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                                <span>Science Academies' Summer Research Fellowship.</span>
+                                <span> JRF/Lecturership or GATE .</span>
+                            </li>
+                            {/* <li className="flex items-start gap-2 text-sm text-slate-600">
+                                <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                <span>IISER Mohali Summer Research Program.</span>
+                            </li> */}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">How to Apply</h4>
+                        <p className="text-sm text-slate-600 mb-4">
+                            Interested students may email their resume directly to the PI.
+                        </p>
+                        <a href="mailto:rajuattada@iisermohali.ac.in" className="inline-flex items-center text-sm font-bold text-purple-600 hover:text-purple-800">
+                            Contact for Projects <ArrowRight className="ml-1 h-4 w-4" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            {/* ---  INTERN CARD --- */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-16 bg-purple-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
+                
+                <div className="relative z-10 mb-6">
+                    <div className="h-14 w-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-4">
+                        <Clock className="h-8 w-8" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-slate-900">Short-Term</h2>
+                    <p className="text-purple-600 font-medium"> Interns</p>
+                </div>
+
+                <div className="space-y-6 flex-grow relative z-10">
+                    <div>
+                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Eligibility</h4>
+                        <ul className="space-y-2">
+                            <li className="flex items-start gap-2 text-sm text-slate-600">
+                                <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                <span> Final year Masters or M.Tech students  .</span>
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
                                 <span>IISER Mohali Summer Research Program.</span>
                             </li>
+                          
                         </ul>
                     </div>
 
