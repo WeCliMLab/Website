@@ -100,6 +100,13 @@ export default function PeoplePage() {
       period: "Jan 2025 - Present",
       interests: "Data Assimilation",
       email: "ph24087@iisermohali.ac.in"
+    },
+    {
+      name: "Himanshu Pandey",
+      role: "PhD Scholar",
+      period: "August 2025 - Present",
+      interests: "Extreme Events",
+      email: "ph25058@iisermohali.ac.in"
     }
   ];
 
