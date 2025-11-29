@@ -359,7 +359,7 @@ const publicationsData = [
 const labMembers = [
   "Attada, R.", "R. Attada", "Raju Attada", 
   "Shukla, K.K.", "K.K. Shukla", "Shukla, K. K.",
-  "Rohtash", "Nischal", "Athira, K.S.", "Athira, K. S.",
+  "Rohtash", "Nischal", "Athira, K.S.", "Athira,K.S.",
   "Saini, R.", "Saini, R", "Kumari, A.", "Punde P", "Akash, P.", "Sreehari, K."
 ];
 
