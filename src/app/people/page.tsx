@@ -76,7 +76,7 @@ export default function PeoplePage() {
     {
       name: "Athira K S",
       role: "PhD Scholar",
-      period: "Jan 2021 - Present",
+      period: "January 2021 - Present",
       badge: "Institute Research Fellow",
       interests: "Winter Weather Extremes, Cold waves, Arctic-midlatitude Teleconnections, WRF",
       email: "ph20044@iisermohali.ac.in"
@@ -84,7 +84,7 @@ export default function PeoplePage() {
     {
       name: "Adil Muhammed I K",
       role: "PhD Scholar",
-      period: "Jan 2025 - Present",
+      period: "January 2025 - Present",
       interests: "Data Assimilation",
       email: "ph24087@iisermohali.ac.in"
     },
@@ -101,14 +101,14 @@ export default function PeoplePage() {
     {
       name: "Akash Shit",
       role: "JRF",
-      period: "Aug 2024 - Present",
+      period: "August 2024 - Present",
       interests: "Atmospheric Convection, Extreme Events Prediction",
       email: "akashshet.dgp@gmail.com"
     },
     {
       name: "Nikhil Hale",
       role: "JRF",
-      period: "Aug 2024 - Present",
+      period: "August 2024 - Present",
       interests: "Climate Modelling, Climate extremes, Polar climate",
       email: "nikhilhale4@gmail.com"
     },
@@ -240,25 +240,25 @@ export default function PeoplePage() {
     {
       name: "Malavika M",
       role: "MS Student",
-      period: "Jul 2024 - Jun 2025",
+      period: "July 2024 - June 2025",
       thesis: "Indian cold waves inferred from Indian highest resolution datasets"
     },
     {
       name: "Himanshu Jain",
       role: "MS Student",
-      period: "Jul 2023 - Jun 2024",
+      period: "July 2023 - June 2024",
       thesis: "Federated Learning on non-iid data"
     },
     {
       name: "Ayush Kumar",
       role: "MS Student",
-      period: "Jul 2023 - Jun 2024",
+      period: "July 2023 - June 2024",
       thesis: "Enhancement of Data assimilation process using Neural networks"
     },
     {
       name: "Amitabha Satyajeet Govande",
       role: "MS Student",
-      period: "Aug 2022 - Aug 2023",
+      period: "August 2022 - August 2023",
       thesis: "Air pollution potential characteristics over India using reanalyses and machine learning approaches",
       current: "PhD, Institute of Risk Assessment Sciences, Utrecht University, the Netherlands",
       publication: "Govande, A., Attada, R. & Shukla, K.K. Predicting PM2.5 levels over Indian metropolitan cities using Recurrent Neural Networks. Earth Sci Inform 18, 1 (2024). https://doi.org/10.1007/s12145-024-01491-4."
@@ -266,7 +266,7 @@ export default function PeoplePage() {
     {
       name: "Bajrang C.",
       role: "MS Student",
-      period: "Aug 2021 - May 2022",
+      period: "August 2021 - May 2022",
       interests: "Physical oceanography, Extreme Events",
       thesis: "Understanding the Monsoonal Extreme Rainfall events in Central India: Dynamics, Thermodynamics and Long-Term Climate Drivers",
       current: "PhD, University of Melbourne, Australia",
@@ -275,14 +275,14 @@ export default function PeoplePage() {
     {
       name: "Meher Sanjana",
       role: "MS Student",
-      period: "Jan 2021 - Dec 2021",
+      period: "January 2021 - December 2021",
       interests: "Data science, Machine learning",
       thesis: "Prediction of winter rainfall over North-Western India using Artificial Neural Network approach"
     },
     {
       name: "Deepanshu Aggarwal",
       role: "MS Student",
-      period: "Aug 2020 - May 2021",
+      period: "August 2020 - May 2021",
       thesis: "Seasonal Mean and Extreme rainfall events over India during Indian Summer Monsoon in an Indian Regional Reanalaysis Framework",
       current: "Probationary Officer, State Bank of India",
       publications: [
@@ -293,7 +293,7 @@ export default function PeoplePage() {
     {
       name: "Abhishek Kumar",
       role: "MS Student",
-      period: "Aug 2020 - May 2021",
+      period: "August 2020 - May 2021",
       thesis: "Thermal Stress over north-western India: Climatology, Trends and Extremes",
       current: "MBA, Indian Institute of Management Udaipur",
       publication: "K.K. Shukla, Attada, R., Abhishek Kumar, Kunchala, R. K., Sanikommu Sivareddy, (2022). Comprehensive analysis of thermal stress over northwest India: Climatology, trends and extremes, 44, Urban Climate. https://doi.org/10.1016/j.uclim.2022.101188"
