@@ -69,14 +69,6 @@ export default function PeoplePage() {
 
   const phdStudents = [
     {
-      name: "Rohtash",
-      role: "PhD Scholar",
-      period: "Aug 2020 - Present",
-      badge: "PM Research Fellow", 
-      interests: "Himalayan climate, Indian summer monsoon, Regional climate modelling",
-      email: "ph20017@iisermohali.ac.in"
-    },
-    {
       name: "Athira K S",
       role: "PhD Scholar",
       period: "Jan 2021 - Present",
@@ -98,6 +90,7 @@ export default function PeoplePage() {
       interests: "Extreme Events",
       email: "ph25058@iisermohali.ac.in"
     }
+    
   ];
 
   const jrfs = [
@@ -136,7 +129,7 @@ export default function PeoplePage() {
       name: "Dr. Singuru Madhusai",
       role: "Institute Post-Doctoral Fellow",
       period: "May 2025 - Present",
-      interests: "NWP, Monsoons, Tropical Cyclones, Climate Variability",
+      interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Variability",
       email: "madhusai@iisermohali.ac.in"
     }
   ];
