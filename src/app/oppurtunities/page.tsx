@@ -225,7 +225,7 @@ export default function OpportunitiesPage() {
                     <div>
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">How to Apply</h4>
                         <p className="text-sm text-slate-600 mb-4">
-                            Interested students may email their resume directly to the mentor.
+                            Interested students may email their resume directly to the Mentor.
                         </p>
                         {/* Changed Link color to amber */}
                         <a href="mailto:rajuattada@iisermohali.ac.in" className="inline-flex items-center text-sm font-bold text-amber-600 hover:text-amber-800">
