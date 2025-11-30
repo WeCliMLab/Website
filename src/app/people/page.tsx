@@ -7,12 +7,13 @@ import {
   User, 
   Users, 
   Briefcase, 
-  Globe
+  Globe,
+  BookOpen
 } from 'lucide-react';
 
 // --- HELPER COMPONENTS ---
 
-// 1. The Avatar Placeholder (Generates initials from name)
+// 1. The Avatar Placeholder
 const AvatarPlaceholder = ({ name, size = "md", color = "blue" }: { name: string, size?: "lg" | "md" | "sm", color?: string }) => {
   const initials = name
     .split(' ')
@@ -33,11 +34,12 @@ const AvatarPlaceholder = ({ name, size = "md", color = "blue" }: { name: string
     indigo: "bg-indigo-100 text-indigo-700",
     slate: "bg-slate-200 text-slate-600",
     amber: "bg-amber-100 text-amber-700",
-    teal: "bg-teal-100 text-teal-700"
+    teal: "bg-teal-100 text-teal-700",
+    rose: "bg-rose-100 text-rose-700"
   };
 
   return (
-    <div className={`rounded-full flex items-center justify-center font-bold tracking-widest shadow-inner ${sizeClasses[size]} ${colorClasses[color] || colorClasses.slate}`}>
+    <div className={`rounded-full flex items-center justify-center font-bold tracking-widest shadow-inner flex-shrink-0 ${sizeClasses[size]} ${colorClasses[color] || colorClasses.slate}`}>
       {initials}
     </div>
   );
@@ -78,7 +80,7 @@ export default function PeoplePage() {
       email: "ph20044@iisermohali.ac.in"
     },
     {
-      name: "Adil Muhammed K",
+      name: "Adil Muhammed I K",
       role: "PhD Scholar",
       period: "Jan 2025 - Present",
       interests: "Data Assimilation",
@@ -91,7 +93,6 @@ export default function PeoplePage() {
       interests: "Extreme Events",
       email: "ph25058@iisermohali.ac.in"
     }
-    
   ];
 
   const jrfs = [
@@ -125,7 +126,7 @@ export default function PeoplePage() {
     }
   ];
 
-    const postDocs = [
+  const postDocs = [
     {
       name: "Dr. Singuru Madhusai",
       role: "Institute Post-Doctoral Fellow",
@@ -145,22 +146,39 @@ export default function PeoplePage() {
     }
   ];
 
-  const alumni = [
+  const summerProjects = [
     {
-      name: "Nischal Sharma",
+      name: "Rishikesh Katakam",
+      role: "Summer Intern",
+      period: "June - Present",
+      project: "Application of neural networks on predicting air pollutants in arid regions."
+    },
+    {
+      name: "Ksheetij Pandey",
+      role: "Summer Intern",
+      period: "June - Present",
+      project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India"
+    }
+  ];
+
+  // --- ALUMNI DATA (Split by Category) ---
+
+  const alumniPhD = [
+    {
+      name: "Dr. Nischal Sharma",
       role: "PhD Scholar (2020-2025)",
       badge: "PMRF",
       current: "Post-Doctoral Fellow, University of Reading, UK"
     },
     {
-      name: "Rohtash",
+      name: "Dr. Rohtash",
       role: "PhD Scholar (2020-2025)",
-      // period: "Aug 2020 - Present",
       badge: "PMRF", 
       current: "Post-Doctoral Fellow"
-      // interests: "Himalayan climate, Indian summer monsoon, Regional climate modelling",
-      // email: "ph20017@iisermohali.ac.in"
-    },  
+    }
+  ];
+
+  const alumniPostDoc = [
     {
       name: "Dr. Krishna Kumar Shukla",
       role: "Post-Doc (2020-2022)",
@@ -175,7 +193,10 @@ export default function PeoplePage() {
       name: "Dr. Pawan Kumar Chaubey",
       role: "Post-Doc (2023-2024)",
       current: "Research Fellow, NTU Singapore"
-    },
+    }
+  ];
+
+  const alumniJRF = [
     {
       name: "Akash P.",
       role: "JRF (2021)",
@@ -212,6 +233,10 @@ export default function PeoplePage() {
       current: "PhD, NIT Rourkela"
     }
   ];
+
+  // Empty arrays as placeholders for future data
+  const prevMasters: any[] = []; 
+  const prevInterns: any[] = [];
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -290,7 +315,6 @@ export default function PeoplePage() {
         </section>
 
         {/* ================= 3. JUNIOR RESEARCH FELLOWS ================= */}
-        {/* Changed layout to row-wise grid matching PhD section */}
         <section>
            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -320,34 +344,45 @@ export default function PeoplePage() {
             </div>
         </section>
 
-        {/* ================= 6. ALUMNI SECTION ================= */}
+        {/* ================= 6. SUMMER PROJECT STUDENTS (NEW SECTION) ================= */}
+        <section>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Summer-Project Students</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {summerProjects.map((person, idx) => (
+                    <TeamCard key={idx} person={person} color="rose" />
+                ))}
+            </div>
+        </section>
+
+        {/* ================= 7. ALUMNI & PAST MEMBERS SECTION ================= */}
         <section className="pt-12 border-t border-slate-200">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-3 mb-10">
             <Users className="h-6 w-6 text-slate-400" />
-            <h3 className="text-2xl font-bold text-slate-900">Alumni & Past Members</h3>
+            <h3 className="text-3xl font-bold text-slate-900">Alumni & Past Members</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-             {alumni.map((alum, idx) => (
-               <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4">
-                  <div className="mt-1">
-                    <AvatarPlaceholder name={alum.name} size="sm" color="slate" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900">{alum.name}</h4>
-                    <p className="text-xs text-slate-500 mb-2">{alum.role}</p>
-                    {alum.badge && (
-                       <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
-                         {alum.badge}
-                       </span>
-                    )}
-                    <div className="flex items-start gap-1.5 text-xs text-emerald-700 font-medium">
-                        <Briefcase className="h-3 w-3 mt-0.5 flex-shrink-0" />
-                        <span>{alum.current}</span>
-                    </div>
-                  </div>
-               </div>
-             ))}
+          <div className="space-y-12">
+            
+            {/* 7.1 PhD Graduates */}
+            <AlumniGroup title="PhD Graduates" members={alumniPhD} />
+
+            {/* 7.2 Post-Doctoral Fellows */}
+            <AlumniGroup title="Post-Doctoral Fellows" members={alumniPostDoc} />
+
+            {/* 7.3 Junior Research Fellows */}
+            <AlumniGroup title="Junior Research Fellows" members={alumniJRF} />
+
+            {/* 7.4 Previous Masters Students */}
+            {/* Conditionally render only if there is data */}
+            {prevMasters.length > 0 && (
+               <AlumniGroup title="Previous Masters Students" members={prevMasters} />
+            )}
+
+            {/* 7.5 Previous Summer-Intern Students */}
+            {prevInterns.length > 0 && (
+               <AlumniGroup title="Previous Summer-Intern Students" members={prevInterns} />
+            )}
+
           </div>
         </section>
 
@@ -357,11 +392,10 @@ export default function PeoplePage() {
 }
 
 
-// --- Reusable Card Component for Grid ---
+// --- Reusable Team Card (Grid) ---
 function TeamCard({ person, color, compact = false }: { person: any, color: string, compact?: boolean }) {
   return (
     <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-       
        <div className="flex items-start justify-between mb-4">
           <AvatarPlaceholder name={person.name} size="md" color={color} />
           {person.badge && (
@@ -370,14 +404,11 @@ function TeamCard({ person, color, compact = false }: { person: any, color: stri
             </span>
           )}
        </div>
-
        <div>
           <h4 className="text-xl font-bold text-slate-900">{person.name}</h4>
           <p className={`text-slate-500 font-medium mb-4 ${compact ? 'text-xs' : 'text-sm'}`}>
-            {person.role} • {person.period}
+            {person.role} {person.period ? `• ${person.period}` : ''}
           </p>
-
-          {/* Interests / Project */}
           <div className="mb-6">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">
                 {person.project ? 'Project' : 'Research Interests'}
@@ -387,13 +418,60 @@ function TeamCard({ person, color, compact = false }: { person: any, color: stri
             </p>
           </div>
        </div>
-
        <div className="mt-auto pt-4 border-t border-slate-100">
-         <a href={`mailto:${person.email}`} className="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
-            <Mail className="h-4 w-4" />
-            <span className="truncate">{person.email}</span>
-         </a>
+         {person.email ? (
+           <a href={`mailto:${person.email}`} className="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
+              <Mail className="h-4 w-4" />
+              <span className="truncate">{person.email}</span>
+           </a>
+         ) : <span className="h-4 block"></span>}
        </div>
+    </div>
+  );
+}
+
+// --- Reusable Alumni Group Section ---
+function AlumniGroup({ title, members, color = "slate" }: { title: string, members: any[], color?: string }) {
+  if (!members || members.length === 0) return null;
+
+  return (
+    <div>
+      <h4 className="text-lg font-bold text-slate-700 mb-4 pl-3 border-l-4 border-slate-300">{title}</h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {members.map((person, idx) => (
+            <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4">
+              <div className="mt-1">
+                <AvatarPlaceholder name={person.name} size="sm" color={color} />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-slate-900">{person.name}</h4>
+                <p className="text-xs text-slate-500 mb-1">{person.role}</p>
+                
+                {person.badge && (
+                    <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
+                      {person.badge}
+                    </span>
+                )}
+
+                {/* Show Current Position OR Project Title */}
+                {person.current && (
+                  <div className="flex items-start gap-1.5 text-xs text-emerald-700 font-medium mt-1">
+                      <Briefcase className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                      <span>{person.current}</span>
+                  </div>
+                )}
+                
+                {person.project && (
+                  <div className="flex items-start gap-1.5 text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded">
+                      <BookOpen className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                      <span className="leading-tight">Project: {person.project}</span>
+                  </div>
+                )}
+
+              </div>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
