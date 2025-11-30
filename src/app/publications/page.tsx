@@ -354,14 +354,13 @@ const publicationsData = [
 // --- HELPER: Detect Lab Members ---
 // List of names to highlight. These must match substrings in the authors string.
 const labMembers = [
-  "Attada, R.", "R. Attada", "Raju Attada", "Attada R", "Attada, R",
+  "Attada, R.", "R. Attada", "Raju Attada", "Attada R", "Attada, R", "Attada",
   "Shukla, K.K.", "K.K. Shukla", "Shukla, K. K.", "Shukla, K. K",
   "Govande, A.",
   "Athira, K. S.", "Athira, K.S.", "Athira,K.S.",
   "Saini, R.", "Saini, R", "Rohtash",
   "Kumari, A.",
   "Nischal, S.", "Nischal", "Nischal.",
-  "Lakshman, K.",
   "Aggarwal, D.",
   "Bajrang, C.",
   "Abhishek Kumar",
@@ -381,7 +380,7 @@ const labMembers = [
   "Malavika, M.",
   "Jain, H.",
   "Kumar, A.", 
-  "Sanjana, M.", 
+   
 ];
 
 // Enhanced component to render authors with bold highlighting using Regex
