@@ -10,14 +10,14 @@ import {
   Sparkles,
   Cpu,
   Globe,
-  FlaskConical // Imported for the Project Positions icon
+  CloudSun 
 } from 'lucide-react';
 
 export default function OpportunitiesPage() {
   
   // --- DATA: Disciplines (Tag Cloud) ---
   const disciplines = [
-    "Atmospheric Sciences", "Oceanic Sciences", "Physics", "Geophysics", "Mathematics", "Computer Science", "Data Sciences", "Remote Sensing", "Artificial Intelligence"  
+    "Atmospheric Sciences", "Earth and Environmental Sciences", "Climate Sciences", "Hydrology", "Geophysics", "Physics", "Mathematics", "Computer Science", "Data Sciences", "Remote Sensing", "Artificial Intelligence"  
   ];
 
   return (
@@ -154,14 +154,13 @@ export default function OpportunitiesPage() {
                 </div>
             </div>
 
-            {/* --- PROJECT POSITIONS (Updated Icon: FlaskConical) --- */}
+            {/* --- PROJECT POSITIONS (CloudSun) --- */}
             <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-16 bg-purple-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
                 
                 <div className="relative z-10 mb-6">
                     <div className="h-14 w-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-4">
-                        {/* Changed Icon to FlaskConical for Science/Research */}
-                        <FlaskConical className="h-8 w-8" />
+                        <CloudSun className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900"> Project Positions </h2>
                     <p className="text-purple-600 font-medium"> Research Fellows</p> 
