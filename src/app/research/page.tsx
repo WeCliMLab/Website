@@ -18,18 +18,8 @@ export default function ResearchPage() {
   // Data structure: Now includes an 'image' field and a 'gradient' fallback
   const researchTopics = [
     {
-      title: "Indian Winter Monsoon",
-      subtitle: "Variability, Drivers & Simulation",
-      icon: <Snowflake className="h-5 w-5" />,
-      // When you have a real image/gif, put it in public/images/ and reference it here:
-      image: "/images/winter-monsoon-sim.gif", 
-      // This gradient acts as a dummy placeholder until you have the image
-      placeholderColor: "from-blue-200 via-blue-100 to-white",
-      content: "Winter precipitation is observed in the northern parts of Indian subcontinent through December to March due to the passage of western disturbances. This precipitation is a primary irrigational source for agriculture and maintains the snow cover of Himalayan glaciers. We aim to understand and simulate the winter precipitation dynamics and its key mechanisms over the Himalayas."
-    },
-    {
-      title: "Himalayan Monsoon",
-      subtitle: "The Water Tower Dynamics",
+      title: "Himalayan Monsoon Rainfall",
+      subtitle: "Variability, Trends, Simulation and Predictability",
       icon: <Mountain className="h-5 w-5" />,
       image: "/images/himalaya-precip.jpg",
       placeholderColor: "from-emerald-200 via-teal-100 to-white",
@@ -52,6 +42,16 @@ export default function ResearchPage() {
       content: "The ISM brings heavy rainfall to the subcontinent, providing over 70% of annual rainfall. Climate change is expected to lead to more extreme rainfall events and longer dry spells. We focus on studying the dynamic characteristics of ISM extremes and aim to simulate them using advanced modelling (WRF) and data assimilation."
     },
     {
+      title: "Indian Winter Monsoon",
+      subtitle: "Variability, Drivers & Simulation",
+      icon: <Snowflake className="h-5 w-5" />,
+      // When you have a real image/gif, put it in public/images/ and reference it here:
+      image: "/images/winter-monsoon-sim.gif", 
+      // This gradient acts as a dummy placeholder until you have the image
+      placeholderColor: "from-blue-200 via-blue-100 to-white",
+      content: "Winter precipitation is observed in the northern parts of Indian subcontinent through December to March due to the passage of western disturbances. This precipitation is a primary irrigational source for agriculture and maintains the snow cover of Himalayan glaciers. We aim to understand and simulate the winter precipitation dynamics and its key mechanisms over the Himalayas."
+    },
+    {
       title: "Aerosols & Dust Storms",
       subtitle: "Investigation of Variability",
       icon: <Layers className="h-5 w-5" />,
@@ -60,7 +60,7 @@ export default function ResearchPage() {
       content: "Atmospheric aerosols demonstrate spatial heterogeneity across India due to urbanization. Abundances in aerosol concentrations impact the ecosystem, visibility, and health. Using state-of-the-art atmospheric modelling and remote sensing, we aim to understand the physical processes responsible for Dust Storms and develop regional early warning systems."
     },
     {
-      title: "Heat Stress",
+      title: "Heat Waves",
       subtitle: "Impacts & Mitigation",
       icon: <ThermometerSun className="h-5 w-5" />,
       image: "/images/heat-stress-map.png",
