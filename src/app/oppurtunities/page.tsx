@@ -9,7 +9,8 @@ import {
   ArrowRight,
   Sparkles,
   Cpu,
-  Globe
+  Globe,
+  FlaskConical // Imported for the Project Positions icon
 } from 'lucide-react';
 
 export default function OpportunitiesPage() {
@@ -17,8 +18,6 @@ export default function OpportunitiesPage() {
   // --- DATA: Disciplines (Tag Cloud) ---
   const disciplines = [
     "Atmospheric Sciences", "Oceanic Sciences", "Physics", "Geophysics", "Mathematics", "Computer Science", "Data Sciences", "Remote Sensing", "Artificial Intelligence"  
-       
-      
   ];
 
   return (
@@ -125,7 +124,7 @@ export default function OpportunitiesPage() {
                         <Briefcase className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">Post-Doctoral</h2>
-                    <p className="text-blue-600 font-medium">Research Fellows</p>
+                    <p className="text-blue-600 font-medium">Research Associate</p>
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
@@ -155,16 +154,17 @@ export default function OpportunitiesPage() {
                 </div>
             </div>
 
-            {/* --- Project */}
+            {/* --- PROJECT POSITIONS (Updated Icon: FlaskConical) --- */}
             <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-16 bg-purple-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
                 
                 <div className="relative z-10 mb-6">
                     <div className="h-14 w-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-4">
-                        <Clock className="h-8 w-8" />
+                        {/* Changed Icon to FlaskConical for Science/Research */}
+                        <FlaskConical className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900"> Project Positions </h2>
-                    {/* <p className="text-purple-600 font-medium">Project Positions </p> */}
+                    <p className="text-purple-600 font-medium"> Research Fellows</p> 
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
@@ -173,7 +173,7 @@ export default function OpportunitiesPage() {
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                                <span> JRF/Lecturership or GATE .</span>
+                                <span> Qualified in any National Eligibility Test (CSIR,UGC,GATE,JAM) .</span>
                             </li>
                             
                         </ul>
@@ -182,7 +182,7 @@ export default function OpportunitiesPage() {
                     <div>
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">How to Apply</h4>
                         <p className="text-sm text-slate-600 mb-4">
-                            Interested students may email their resume directly to the PI.
+                            Interested candidates may email their resume directly to the PI.
                         </p>
                         <a href="mailto:rajuattada@iisermohali.ac.in" className="inline-flex items-center text-sm font-bold text-purple-600 hover:text-purple-800">
                             Contact for Projects <ArrowRight className="ml-1 h-4 w-4" />
@@ -192,16 +192,18 @@ export default function OpportunitiesPage() {
             </div>
 
           
-            {/* ---  INTERN CARD --- */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-16 bg-purple-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
+            {/* --- SHORT-TERM INTERNS (Updated Color: Amber/Orange) --- */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-amber-200 transition-all duration-300 flex flex-col relative overflow-hidden group">
+                {/* Changed background color to amber-50 */}
+                <div className="absolute top-0 right-0 p-16 bg-amber-50 rounded-bl-full -mr-8 -mt-8 group-hover:scale-110 transition-transform"></div>
                 
                 <div className="relative z-10 mb-6">
-                    <div className="h-14 w-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-700 mb-4">
+                    {/* Changed background and text color to amber */}
+                    <div className="h-14 w-14 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-4">
                         <Clock className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">Short-Term</h2>
-                    <p className="text-purple-600 font-medium"> Interns</p>
+                    <p className="text-amber-600 font-medium"> Interns</p>
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
@@ -209,24 +211,26 @@ export default function OpportunitiesPage() {
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Eligibility</h4>
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-sm text-slate-600">
-                                <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                {/* Changed Check color to amber */}
+                                <CheckCircle2 className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
                                 <span> Final year Masters or M.Tech students  .</span>
                             </li>
                             <li className="flex items-start gap-2 text-sm text-slate-600">
-                                <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle2 className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
                                 <span> BS-MS can apply for IISER Mohali Summer Research Program.</span>
                             </li>
-                          
+                           
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">How to Apply</h4>
                         <p className="text-sm text-slate-600 mb-4">
-                            Interested students may email their resume directly to the PI.
+                            Interested students may email their resume directly to the mentor.
                         </p>
-                        <a href="mailto:rajuattada@iisermohali.ac.in" className="inline-flex items-center text-sm font-bold text-purple-600 hover:text-purple-800">
-                            Contact for Projects <ArrowRight className="ml-1 h-4 w-4" />
+                        {/* Changed Link color to amber */}
+                        <a href="mailto:rajuattada@iisermohali.ac.in" className="inline-flex items-center text-sm font-bold text-amber-600 hover:text-amber-800">
+                            Send Email Application <ArrowRight className="ml-1 h-4 w-4" />
                         </a>
                     </div>
                 </div>
