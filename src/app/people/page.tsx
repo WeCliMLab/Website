@@ -200,29 +200,9 @@ export default function PeoplePage() {
 
   const alumniJRF = [
     {
-      name: "Sanjeev Singh",
-      role: "JRF (2023-2025)",
-      current: "PhD, NIT Rourkela"
-    }
-    {
-      name: "Nirvan Abhilash",
-      role: "JRF (2024)",
-      current: "PhD, University of Houston, USA"
-    },
-    {
-      name: "Deepak P",
-      role: "JRF (2022-2023)",
-      current: "PhD, IIT Roorkee"
-    },
-    {
-      name: "Sreehari K",
-      role: "JRF (2022-2023)",
-      current: "PhD, Wageningen University & Research, Netherlands"
-    },
-    {
-      name: "Debasish Mahapatra",
-      role: "JRF (2023)",
-      current: "PhD, Ghent University, Belgium"
+      name: "Akash P.",
+      role: "JRF (2021)",
+      current: "PhD, POSTECH, South Korea"
     },
     {
       name: "Pravin Punde",
@@ -230,9 +210,29 @@ export default function PeoplePage() {
       current: "PhD, UiT The Arctic University of Norway"
     },
     {
-      name: "Akash P.",
-      role: "JRF (2021)",
-      current: "PhD, POSTECH, South Korea"
+      name: "Debasish Mahapatra",
+      role: "JRF (2023)",
+      current: "PhD, Ghent University, Belgium"
+    },
+    {
+      name: "Sreehari K",
+      role: "JRF (2022-2023)",
+      current: "PhD, Wageningen University & Research, Netherlands"
+    },
+    {
+      name: "Deepak P",
+      role: "JRF (2022-2023)",
+      current: "PhD, IIT Roorkee"
+    },
+    {
+      name: "Nirvan Abhilash",
+      role: "JRF (2024)",
+      current: "PhD, University of Houston, USA"
+    },
+    {
+      name: "Sanjeev Singh",
+      role: "JRF (2023-2025)",
+      current: "PhD, NIT Rourkela"
     },
   ];
 
@@ -308,7 +308,7 @@ export default function PeoplePage() {
     }
   ];
 
-  // --- PREVIOUS SUMMER INTERNS (Detailed Data) ---
+  // --- PREVIOUS SUMMER INTERNS ---
   const prevInterns = [
     {
       name: "Shrirang Bhale",
@@ -488,9 +488,9 @@ export default function PeoplePage() {
             </div>
         </section>
 
-        {/* ================= 6. SUMMER PROJECT STUDENTS ================= */}
+        {/* ================= 6. SUMMER INTERN STUDENTS ================= */}
         <section>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Summer-Project Students</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Summer Intern Students</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {summerProjects.map((person, idx) => (
                     <TeamCard key={idx} person={person} color="rose" />
@@ -516,21 +516,21 @@ export default function PeoplePage() {
             {/* 7.3 Junior Research Fellows */}
             <AlumniGroup title="Junior Research Fellows" members={alumniJRF} />
 
-            {/* 7.4 Previous Masters Students - NO PHOTOS */}
-            {prevMasters.length > 0 && (
+            {/* 7.4 Previous Masters Students */}
+            {previousMasters.length > 0 && (
                <AlumniGroup 
                   title="Masters Students" 
-                  members={prevMasters} 
+                  members={previousMasters} 
                   showAvatar={false}
                />
             )}
 
-            {/* 7.5 Previous Summer-Intern Students - NO PHOTOS */}
+            {/* 7.5 Previous Summer-Intern Students */}
             {prevInterns.length > 0 && (
                <AlumniGroup 
-                  title="Summer-Intern Students" 
+                  title="Summer Intern Students" 
                   members={prevInterns} 
-                  showAvatar={false} // Disable avatar to match method
+                  showAvatar={false} // 
                />
             )}
 
