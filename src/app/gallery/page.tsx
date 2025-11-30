@@ -10,7 +10,8 @@ import {
   Mic, 
   Globe, 
   PartyPopper,
-  Presentation
+  Presentation,
+  Mountain // Added for Lab Trips
 } from 'lucide-react';
 
 // --- DATA: CONFERENCES ---
@@ -19,61 +20,61 @@ const conferences = [
     title: "INTROMET 2025",
     location: "IITM, Pune, Maharastra",
     date: "November 18 – 20, 2025",
-    color: "from-blue-500 to-cyan-400"
+    color: "from-blue-600 to-indigo-600" // Deep Blue
   },
   {
     title: "AOGS 2025 (22nd Annual Meeting)",
     location: "Sands Expo & Convention Centre, Singapore",
     date: "July 27 – August 1, 2025",
-    color: "from-blue-500 to-cyan-400"
+    color: "from-violet-600 to-purple-500" // Vibrant Purple
   },
   {
     title: "Indo-German School on SLESS",
     location: "IIT Roorkee",
     date: "March 3 – 7, 2025",
-    color: "from-emerald-500 to-teal-400"
+    color: "from-emerald-600 to-teal-500" // Green/Teal
   },
   {
     title: "India - UK Climate Action Summit",
     location: "ISB, Mohali",
     date: "Feburary 2025",
-    color: "from-indigo-500 to-purple-400"
+    color: "from-rose-600 to-pink-500" // Rose/Pink
   },
   {
     title: "EGU General Assembly 2024",
     location: "Vienna, Austria",
     date: "April 2024",
-    color: "from-orange-400 to-red-400"
+    color: "from-amber-500 to-orange-500" // Amber/Orange
   },
   {
     title: "ICRC - CORDEX 2023",
     location: "IITM, Pune",
     date: "September 2023",
-    color: "from-slate-600 to-slate-400"
+    color: "from-slate-700 to-slate-500" // Professional Slate
   },
   {
     title: "AOGS 2023",
     location: "Singapore",
     date: "July-August 2023",
-    color: "from-blue-500 to-blue-300"
+    color: "from-cyan-600 to-blue-500" // Cyan/Blue
   },
   {
     title: "EGU General Assembly 2023",
     location: "Vienna, Austria",
     date: "April 2023",
-    color: "from-orange-400 to-amber-300"
+    color: "from-red-500 to-orange-400" // Red/Orange
   },
   {
     title: "FORESEED 2023",
     location: "IIT Roorkee",
     date: "January 2023",
-    color: "from-emerald-600 to-green-500"
+    color: "from-teal-600 to-emerald-400" // Teal
   },
   {
     title: "TROPMET 2022",
     location: "IISER Bhopal",
     date: "November 29-December 02 2022",
-    color: "from-sky-500 to-indigo-500"
+    color: "from-sky-600 to-cyan-500" // Sky Blue
   }
 ];
 
@@ -134,12 +135,12 @@ const activities = [
     desc: "Journal clubs and research updates every Friday.",
     icon: <Presentation className="h-8 w-8 text-white" />,
     color: "from-blue-500 to-indigo-500"
-  }
+  }, // <--- Fixed missing comma here
   {
     title: "Lab Trips",
     desc: "Enjoying the Nature.",
-    icon: <Calendar className="h-8 w-8 text-white" />,
-    color: "from-blue-500 to-indigo-500"
+    icon: <Mountain className="h-8 w-8 text-white" />, // Changed icon to Mountain
+    color: "from-lime-500 to-green-500"
   }
 ];
 
@@ -198,20 +199,20 @@ export default function GalleryPage() {
                             {/* Uncomment below when you have images */}
                             {/* <Image src={`/images/conferences/${idx}.jpg`} fill className="object-cover opacity-50" /> */}
                             
-                            <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/30">
+                            <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/30 shadow-lg">
                                 <Globe className="h-8 w-8 text-white" />
                             </div>
                         </div>
 
                         <div className="p-6 flex-grow flex flex-col">
-                            <span className="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 rounded-full w-fit">
+                            <span className="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-100 rounded-full w-fit">
                                 {conf.date}
                             </span>
                             <h3 className="text-xl font-bold text-slate-900 mb-2 leading-snug">
                                 {conf.title}
                             </h3>
-                            <div className="mt-auto flex items-center gap-2 text-slate-500 text-sm">
-                                <MapPin className="h-4 w-4" />
+                            <div className="mt-auto flex items-center gap-2 text-slate-500 text-sm font-medium">
+                                <MapPin className="h-4 w-4 text-emerald-500" />
                                 {conf.location}
                             </div>
                         </div>
@@ -236,13 +237,13 @@ export default function GalleryPage() {
                         </div>
 
                         {/* Details */}
-                        <div className="text-center md:text-left">
+                        <div className="text-center md:text-left flex-1">
                             <h3 className="text-2xl font-bold text-slate-900">{visit.visitor}</h3>
                             <p className="text-emerald-600 font-medium mb-4">{visit.role}</p>
                             
                             <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 inline-block md:block w-full">
                                 <div className="flex items-start justify-center md:justify-start gap-3">
-                                    <Mic className="h-5 w-5 text-slate-400 mt-0.5" />
+                                    <Mic className="h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0" />
                                     <div>
                                         <p className="text-slate-700 font-medium">{visit.topic}</p>
                                         <p className="text-slate-400 text-xs mt-1 flex items-center justify-center md:justify-start gap-1">
