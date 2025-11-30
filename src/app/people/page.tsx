@@ -159,6 +159,7 @@ export default function PeoplePage() {
       current: "Post-Doctoral Fellow"
       // interests: "Himalayan climate, Indian summer monsoon, Regional climate modelling",
       // email: "ph20017@iisermohali.ac.in"
+    },  
     {
       name: "Dr. Krishna Kumar Shukla",
       role: "Post-Doc (2020-2022)",
