@@ -29,6 +29,16 @@ interface Project {
 const projects: Project[] = [
   // --- UPCOMING / NEW ---
   {
+    title: "To be Updated",
+    agency: "National Centre For Medium Range Weather Forecasting (NCMRWF)",
+    agencyShort: "NCMRWF",
+    tenure: "Dec 2025 – Dec 2028",
+    role: "Principal Investigator",
+    status: "Upcoming",
+    // description: " integrating Deep Learning with traditional physical models to improve forecast accuracy.",
+    highlight: true
+  },
+  {
     title: "Advances in Numerical Weather Prediction (NWP) Modelling using AI/ML Techniques",
     agency: "RESPOND, SAC, Indian Space Research Organization (ISRO)",
     agencyShort: "ISRO - SAC",
@@ -54,7 +64,7 @@ const projects: Project[] = [
     agencyShort: "ISRO - NRSC",
     tenure: "Oct 2025 – Oct 2027",
     role: "Principal Investigator",
-    status: "Upcoming",
+    status: "Active",
     description: "Utilizing satellite data for high-resolution mountain weather modelling."
   },
 
