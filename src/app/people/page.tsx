@@ -8,7 +8,9 @@ import {
   Users, 
   Briefcase, 
   Globe,
-  BookOpen
+  BookOpen,
+  FileText,
+  PenTool
 } from 'lucide-react';
 
 // --- HELPER COMPONENTS ---
@@ -161,7 +163,7 @@ export default function PeoplePage() {
     }
   ];
 
-  // --- ALUMNI DATA (Split by Category) ---
+  // --- ALUMNI DATA ---
 
   const alumniPhD = [
     {
@@ -234,8 +236,79 @@ export default function PeoplePage() {
     }
   ];
 
-  // Empty arrays as placeholders for future data
-  const prevMasters: any[] = []; 
+  // --- PREVIOUS MASTERS STUDENTS (Detailed Data) ---
+  const prevMasters = [
+    {
+      name: "Malavika M",
+      role: "MS Student",
+      period: "Jul 2024 - Jun 2025",
+      thesis: "Indian cold waves inferred from Indian highest resolution datasets"
+    },
+    {
+      name: "Himanshu Jain",
+      role: "MS Student",
+      period: "Jul 2023 - Jun 2024",
+      thesis: "Federated Learning on non-iid data"
+    },
+    {
+      name: "Ayush Kumar",
+      role: "MS Student",
+      period: "Jul 2023 - Jun 2024",
+      thesis: "Enhancement of Data assimilation process using Neural networks"
+    },
+    {
+      name: "Amitabha Satyajeet Govande",
+      role: "MS Student",
+      period: "Aug 2022 - Aug 2023",
+      thesis: "Air pollution potential characteristics over India using reanalyses and machine learning approaches",
+      current: "PhD, Institute of Risk Assessment Sciences, Utrecht University, the Netherlands",
+      publication: "Govande, A., Attada, R. & Shukla, K.K. Predicting PM2.5 levels over Indian metropolitan cities using Recurrent Neural Networks. Earth Sci Inform 18, 1 (2024). https://doi.org/10.1007/s12145-024-01491-4."
+    },
+    {
+      name: "Bajrang C.",
+      role: "MS Student",
+      period: "Aug 2021 - May 2022",
+      interests: "Physical oceanography, Extreme Events",
+      thesis: "Understanding the Monsoonal Extreme Rainfall events in Central India: Dynamics, Thermodynamics and Long-Term Climate Drivers",
+      current: "PhD, University of Melbourne, Australia",
+      publication: "Bajrang, C., Attada, R. & Goswami, B.N. Possible factors for the recent changes in frequency of central Indian Summer Monsoon precipitation extremes during 2005–2020. npj Climate and Atmospheric Science 6, 120 (2023). https://doi.org/10.1038/s41612-023-00450-y"
+    },
+    {
+      name: "Meher Sanjana",
+      role: "MS Student",
+      period: "Jan 2021 - Dec 2021",
+      interests: "Data science, Machine learning",
+      thesis: "Prediction of winter rainfall over North-Western India using Artificial Neural Network approach"
+    },
+    {
+      name: "Deepanshu Aggarwal",
+      role: "MS Student",
+      period: "Aug 2020 - May 2021",
+      thesis: "Seasonal Mean and Extreme rainfall events over India during Indian Summer Monsoon in an Indian Regional Reanalaysis Framework",
+      current: "Probationary Officer, State Bank of India",
+      publications: [
+        "Aggarwal, D., Attada, R., Shukla, K. K., Chakraborty, R., & Kunchala, R. K. (2022). Monsoon precipitation characteristics and extreme precipitation events over Northwest India using Indian high resolution regional reanalysis. Atmospheric Research, 105993. https://doi.org/10.1016/j.atmosres.2021.105993",
+        "Aggarwal, D., Chakraborty, R. & Attada, R. Investigating bi-decadal precipitation changes over the Northwest Himalayas during the pre-monsoon: role of Pacific decadal oscillations. Clim Dyn (2023). https://doi.org/10.1007/s00382-023-06969-3"
+      ]
+    },
+    {
+      name: "Abhishek Kumar",
+      role: "MS Student",
+      period: "Aug 2020 - May 2021",
+      thesis: "Thermal Stress over north-western India: Climatology, Trends and Extremes",
+      current: "MBA, Indian Institute of Management Udaipur",
+      publication: "K.K. Shukla, Attada, R., Abhishek Kumar, Kunchala, R. K., Sanikommu Sivareddy, (2022). Comprehensive analysis of thermal stress over northwest India: Climatology, trends and extremes, 44, Urban Climate. https://doi.org/10.1016/j.uclim.2022.101188"
+    },
+    {
+      name: "K Lakshman",
+      role: "M. Tech Student",
+      period: "2020-2021",
+      thesis: "Study of Heat Wave Characteristics Over East Coast of India using High-Resolution IMDAA Reanalysis",
+      current: "PhD, National Institute of Technology Rourkela",
+      publication: "Lakshman, K., Nadimpalli, R., Srivastava, A., Osuri, K.K., Attada, R. and Parekh, A. (2025), High-Resolution Analysis of Severe Heat Wave Dynamics and Thermal Discomfort Across India. Int J Climatol. https://doi.org/10.1002/joc.8753."
+    }
+  ];
+
   const prevInterns: any[] = [];
 
   return (
@@ -344,7 +417,7 @@ export default function PeoplePage() {
             </div>
         </section>
 
-        {/* ================= 6. SUMMER PROJECT STUDENTS (NEW SECTION) ================= */}
+        {/* ================= 6. SUMMER PROJECT STUDENTS ================= */}
         <section>
             <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Summer-Project Students</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -372,10 +445,14 @@ export default function PeoplePage() {
             {/* 7.3 Junior Research Fellows */}
             <AlumniGroup title="Junior Research Fellows" members={alumniJRF} />
 
-            {/* 7.4 Previous Masters Students */}
+            {/* 7.4 Previous Masters Students - NO PHOTOS */}
             {/* Conditionally render only if there is data */}
             {prevMasters.length > 0 && (
-               <AlumniGroup title="Previous Masters Students" members={prevMasters} />
+               <AlumniGroup 
+                  title="Previous Masters Students" 
+                  members={prevMasters} 
+                  showAvatar={false} // Disable avatar for this group
+               />
             )}
 
             {/* 7.5 Previous Summer-Intern Students */}
@@ -431,7 +508,17 @@ function TeamCard({ person, color, compact = false }: { person: any, color: stri
 }
 
 // --- Reusable Alumni Group Section ---
-function AlumniGroup({ title, members, color = "slate" }: { title: string, members: any[], color?: string }) {
+function AlumniGroup({ 
+  title, 
+  members, 
+  color = "slate",
+  showAvatar = true // Default to showing avatar
+}: { 
+  title: string, 
+  members: any[], 
+  color?: string,
+  showAvatar?: boolean
+}) {
   if (!members || members.length === 0) return null;
 
   return (
@@ -439,21 +526,45 @@ function AlumniGroup({ title, members, color = "slate" }: { title: string, membe
       <h4 className="text-lg font-bold text-slate-700 mb-4 pl-3 border-l-4 border-slate-300">{title}</h4>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {members.map((person, idx) => (
-            <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4">
-              <div className="mt-1">
-                <AvatarPlaceholder name={person.name} size="sm" color={color} />
-              </div>
-              <div className="flex-1">
-                <h4 className="font-bold text-slate-900">{person.name}</h4>
-                <p className="text-xs text-slate-500 mb-1">{person.role}</p>
-                
-                {person.badge && (
-                    <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
-                      {person.badge}
-                    </span>
+            <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4 h-full">
+              
+              {/* Only render Avatar if showAvatar is true */}
+              {showAvatar && (
+                <div className="mt-1">
+                  <AvatarPlaceholder name={person.name} size="sm" color={color} />
+                </div>
+              )}
+
+              <div className="flex-1 space-y-2">
+                <div>
+                    <h4 className="font-bold text-slate-900">{person.name}</h4>
+                    <p className="text-xs text-slate-500 mb-1">
+                        {person.role} {person.period && `(${person.period})`}
+                    </p>
+                    
+                    {person.badge && (
+                        <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
+                        {person.badge}
+                        </span>
+                    )}
+                </div>
+
+                {/* --- Research Interests --- */}
+                {person.interests && (
+                   <p className="text-xs text-slate-600">
+                     <strong className="text-slate-700">Research Interests:</strong> {person.interests}
+                   </p>
                 )}
 
-                {/* Show Current Position OR Project Title */}
+                {/* --- Thesis Title --- */}
+                {person.thesis && (
+                   <div className="flex items-start gap-2 text-xs text-slate-600 bg-slate-50 p-2 rounded border border-slate-100">
+                      <FileText className="h-3 w-3 mt-0.5 text-slate-400 flex-shrink-0" />
+                      <span className="leading-tight"><strong>Thesis:</strong> {person.thesis}</span>
+                   </div>
+                )}
+
+                {/* --- Current Affiliation --- */}
                 {person.current && (
                   <div className="flex items-start gap-1.5 text-xs text-emerald-700 font-medium mt-1">
                       <Briefcase className="h-3 w-3 mt-0.5 flex-shrink-0" />
@@ -461,12 +572,33 @@ function AlumniGroup({ title, members, color = "slate" }: { title: string, membe
                   </div>
                 )}
                 
+                {/* --- Project (General) --- */}
                 {person.project && (
                   <div className="flex items-start gap-1.5 text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded">
                       <BookOpen className="h-3 w-3 mt-0.5 flex-shrink-0" />
                       <span className="leading-tight">Project: {person.project}</span>
                   </div>
                 )}
+
+                {/* --- Publications (Single String) --- */}
+                {person.publication && (
+                   <div className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
+                      <div className="flex gap-1.5">
+                         <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
+                         <span>{person.publication}</span>
+                      </div>
+                   </div>
+                )}
+
+                {/* --- Publications (Array) --- */}
+                {person.publications && person.publications.map((pub: string, pIdx: number) => (
+                   <div key={pIdx} className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
+                      <div className="flex gap-1.5">
+                         <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
+                         <span>{pub}</span>
+                      </div>
+                   </div>
+                ))}
 
               </div>
             </div>
