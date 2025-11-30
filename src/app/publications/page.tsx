@@ -38,7 +38,7 @@ const publicationsData = [
     year: 2025,
     title: "Declining summer circulation over the Eastern Mediterranean and Middle East",
     authors: "Gandham, H., Dasari, H.P., Luong, T.M., Attada, R. et al.",
-    journal: "npj climate and atmospheric science",
+    journal: "npj Clim Atmos Sci",
     doi: "https://doi.org/10.1038/s41612-025-01072-2"
   },
   {
@@ -66,7 +66,7 @@ const publicationsData = [
     year: 2025,
     title: "Multi-Physics Ensemble Framework for Representing Western Himalayan Precipitation Climatology and Extremes: An Assessment from WRF Model",
     authors: "Nischal, S., & R. Attada",
-    journal: "Weather and Forecasting",
+    journal: "Wea. Forecasting",
     doi: "https://doi.org/10.1175/WAF-D-24-0057.1"
   },
   {
@@ -80,14 +80,14 @@ const publicationsData = [
     year: 2025,
     title: "Strengthening of Indian Ocean Dipole-Rainfall Relationship in Sri Lanka After the 1980s",
     authors: "Kajakokulan, P., Jayawardena, S. & R. Attada",
-    journal: "Earth Systems and Environment",
+    journal: "Earth Syst Environ",
     doi: "https://doi.org/10.1007/s41748-025-00572-8"
   },
   {
     year: 2025,
     title: "High-Resolution Analysis of Severe Heat Wave Dynamics and Thermal Discomfort Across India",
     authors: "Lakshman, K., Nadimpalli, R., Srivastava, A., Osuri, K.K., Attada, R. and Parekh, A.",
-    journal: "International Journal of Climatology",
+    journal: "Int J Climatol",
     doi: "https://doi.org/10.1002/joc.8753"
   },
 
@@ -361,6 +361,7 @@ const labMembers = [
   "Saini, R.", "Saini, R", "Rohtash",
   "Kumari, A.",
   "Nischal, S.", "Nischal", "Nischal.",
+  "Lakshman, K.",
   "Aggarwal, D.",
   "Bajrang, C.",
   "Abhishek Kumar",
@@ -371,8 +372,8 @@ const labMembers = [
   "Mahapatra, D.", 
   "Singh, S.", 
   "Abhilash, N.", 
-  "Nikhil Hale", 
-  "Akash Shit.", 
+  "Hale, N.", "Nikhil Hale",
+  "Shit, A.", "Akash Shit.",
   "Pandey, H.", 
   "Adil, M.", 
   "Madhusai, S.", 
@@ -380,13 +381,12 @@ const labMembers = [
   "Malavika, M.",
   "Jain, H.",
   "Kumar, A.", 
-   
+  "Sanjana, M.", 
 ];
 
 // Enhanced component to render authors with bold highlighting using Regex
 const AuthorList = ({ authors }: { authors: string }) => {
   // Sort lab members by length descending to match longest possible names first
-  // e.g., match "Raju Attada" before "Attada"
   const sortedMembers = [...labMembers].sort((a, b) => b.length - a.length);
   
   // Escape special characters for regex
@@ -396,7 +396,6 @@ const AuthorList = ({ authors }: { authors: string }) => {
   const pattern = new RegExp(`(${escapedMembers.join('|')})`, 'g');
   
   // Split the authors string by the pattern
-  // The capturing group () in regex ensures the delimiter (the name) is included in the result array
   const parts = authors.split(pattern);
 
   return (
@@ -406,7 +405,10 @@ const AuthorList = ({ authors }: { authors: string }) => {
         const isMember = labMembers.includes(part);
         
         return (
-          <span key={i} className={isMember ? "font-bold text-slate-900" : ""}>
+          <span 
+            key={i} 
+            className={isMember ? "font-bold text-red-700" : ""} // Applied brick-red color here
+          >
             {part}
           </span>
         );
