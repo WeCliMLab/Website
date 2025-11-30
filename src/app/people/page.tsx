@@ -32,7 +32,8 @@ const AvatarPlaceholder = ({ name, size = "md", color = "blue" }: { name: string
     emerald: "bg-emerald-100 text-emerald-700",
     indigo: "bg-indigo-100 text-indigo-700",
     slate: "bg-slate-200 text-slate-600",
-    amber: "bg-amber-100 text-amber-700"
+    amber: "bg-amber-100 text-amber-700",
+    teal: "bg-teal-100 text-teal-700"
   };
 
   return (
@@ -229,13 +230,12 @@ export default function PeoplePage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
 
-        {/* ================= PI SECTION ================= */}
+        {/* ================= 1. PI SECTION ================= */}
         <section>
           <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-10 items-start">
             
             {/* PI Avatar */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
-               {/* Change size to "lg" for bigger circle */}
                <AvatarPlaceholder name={pi.name} size="lg" color="emerald" />
             </div>
 
@@ -263,35 +263,23 @@ export default function PeoplePage() {
                 </div>
 
                 <div className="space-y-2">
-                   <p className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-2 flex items-center gap-2">
-                     <Award className="h-4 w-4" /> Memberships
-                   </p>
-                   <div className="flex flex-wrap gap-2">
-                     {pi.memberships.map((m) => (
-                       <span key={m} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">
-                         {m}
-                       </span>
-                     ))}
-                   </div>
+                    <p className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-2 flex items-center gap-2">
+                      <Award className="h-4 w-4" /> Memberships
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {pi.memberships.map((m) => (
+                        <span key={m} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">
+                          {m}
+                        </span>
+                      ))}
+                    </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ================= CURRENT RESEARCHERS ================= */}
-        
-        {/* Post-Docs */}
-        <section>
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-emerald-500 pl-4">Post-Doctoral Fellows</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {postDocs.map((person, idx) => (
-                <TeamCard key={idx} person={person} color="teal" />
-             ))}
-          </div>
-        </section>
-
-        {/* PhD Students */}
+        {/* ================= 2. GRADUATE (PHD) STUDENTS ================= */}
         <section>
           <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-500 pl-4">Graduate Students (PhD)</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -301,48 +289,38 @@ export default function PeoplePage() {
           </div>
         </section>
 
-        {/* JRFs & Masters - Combined Row logic or Separate Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <section>
-                <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
-                <div className="space-y-6">
-                    {jrfs.map((person, idx) => (
-                        <TeamCard key={idx} person={person} color="amber" compact />
-                    ))}
-                </div>
-            </section>
-            
-            <section>
-                <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-500 pl-4">Masters Students</h3>
-                <div className="space-y-6">
-                    {masters.map((person, idx) => (
-                        <TeamCard key={idx} person={person} color="slate" compact />
-                    ))}
-                </div>
-            </section>
+        {/* ================= 3. JUNIOR RESEARCH FELLOWS ================= */}
+        {/* Changed layout to row-wise grid matching PhD section */}
+        <section>
+           <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {jrfs.map((person, idx) => (
+                  <TeamCard key={idx} person={person} color="amber" />
+              ))}
+           </div>
+        </section>
 
-            {/* <section>
-                <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
-                <div className="space-y-6">
-                    {jrfs.map((person, idx) => (
-                        <TeamCard key={idx} person={person} color="amber" compact />
-                    ))}
-                </div>
-            </section>
-            
-            <section>
-                <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
-                <div className="space-y-6">
-                    {jrfs.map((person, idx) => (
-                        <TeamCard key={idx} person={person} color="amber" compact />
-                    ))}
-                </div>
-            </section> */}
-            
-        </div>
+        {/* ================= 4. POST-DOCTORAL FELLOWS ================= */}
+        <section>
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-emerald-500 pl-4">Post-Doctoral Fellows</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             {postDocs.map((person, idx) => (
+                <TeamCard key={idx} person={person} color="teal" />
+             ))}
+          </div>
+        </section>
 
+        {/* ================= 5. MASTERS STUDENTS ================= */}
+        <section>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-500 pl-4">Masters Students</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {masters.map((person, idx) => (
+                    <TeamCard key={idx} person={person} color="slate" />
+                ))}
+            </div>
+        </section>
 
-        {/* ================= ALUMNI SECTION ================= */}
+        {/* ================= 6. ALUMNI SECTION ================= */}
         <section className="pt-12 border-t border-slate-200">
           <div className="flex items-center gap-3 mb-8">
             <Users className="h-6 w-6 text-slate-400" />
