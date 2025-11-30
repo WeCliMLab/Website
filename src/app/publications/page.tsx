@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import { BookOpen, Search, ExternalLink, Calendar, Filter } from 'lucide-react';
 
 // --- DATA: Full List of Publications ---
-// Note: I have pre-cleaned the input list for you.
-
 const publicationsData = [
   // === 2025 ===
   {
@@ -351,32 +349,64 @@ const publicationsData = [
     journal: "Climate Dynamics",
     doi: "https://doi.org/10.1007/s00382-017-3781-z"
   }
-  // (Older publications can be added in the same format)
 ];
 
 // --- HELPER: Detect Lab Members ---
-// Add the names of your lab members here to automatically bold them.
+// List of names to highlight. These must match substrings in the authors string.
 const labMembers = [
-  "Attada, R.", "R. Attada", "Raju Attada", 
-  "Shukla, K.K.", "K.K. Shukla", "Shukla, K. K.",
-  "Rohtash", "Nischal", "Athira, K.S.", "Athira,K.S.",
-  "Saini, R.", "Saini, R", "Kumari, A.", "Punde P", "Akash, P.", "Sreehari, K."
+  "Attada, R.", "R. Attada", "Raju Attada", "Attada R", "Attada, R",
+  "Shukla, K.K.", "K.K. Shukla", "Shukla, K. K.", "Shukla, K. K",
+  "Govande, A.",
+  "Athira, K. S.", "Athira, K.S.", "Athira,K.S.",
+  "Saini, R.", "Saini, R", "Rohtash",
+  "Kumari, A.",
+  "Nischal, S.", "Nischal", "Nischal.",
+  "Aggarwal, D.",
+  "Bajrang, C.",
+  "Abhishek Kumar",
+  "Pathaikara, A.", "Akash, P.", "Akash P",
+  "Sreehari, K.",
+  "Pravin, P.", "Punde P",
+  "Mahapatra, D.", 
+  "Singh, S.", 
+  "Abhilash, N.", 
+  "Nikhil Hale", 
+  "Akash Shit.", 
+  "Pandey, H.", 
+  "Adil, M.", 
+  "Madhusai, S.", 
+  "Singh, D.", 
+  "Malavika, M.",
+  "Jain, H.",
+  "Kumar, A.", 
+   
 ];
 
-// Component to render authors with bold highlighting
+// Enhanced component to render authors with bold highlighting using Regex
 const AuthorList = ({ authors }: { authors: string }) => {
-  // Simple check to bold strings that match lab members
-  // This splits by common delimiters to check specific names
+  // Sort lab members by length descending to match longest possible names first
+  // e.g., match "Raju Attada" before "Attada"
+  const sortedMembers = [...labMembers].sort((a, b) => b.length - a.length);
+  
+  // Escape special characters for regex
+  const escapedMembers = sortedMembers.map(member => member.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  
+  // Create a single regex pattern to match any of the lab members
+  const pattern = new RegExp(`(${escapedMembers.join('|')})`, 'g');
+  
+  // Split the authors string by the pattern
+  // The capturing group () in regex ensures the delimiter (the name) is included in the result array
+  const parts = authors.split(pattern);
+
   return (
     <span className="text-slate-600 text-sm">
-      {authors.split(/,|&/).map((part, i, arr) => {
-        const trimmed = part.trim();
-        const isMember = labMembers.some(member => trimmed.includes(member));
+      {parts.map((part, i) => {
+        // Check if the part matches any lab member string
+        const isMember = labMembers.includes(part);
         
         return (
           <span key={i} className={isMember ? "font-bold text-slate-900" : ""}>
             {part}
-            {i < arr.length - 1 ? ", " : ""}
           </span>
         );
       })}
@@ -428,33 +458,33 @@ export default function PublicationsPage() {
       {/* ================= TOOLBAR ================= */}
       <div className="sticky top-16 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-4">
-           
-           {/* Search */}
-           <div className="relative flex-grow">
-             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
-             <input 
-               type="text" 
-               placeholder="Search papers, authors, or journals..." 
-               className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
-               value={searchTerm}
-               onChange={(e) => setSearchTerm(e.target.value)}
-             />
-           </div>
+            
+            {/* Search */}
+            <div className="relative flex-grow">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
+              <input 
+                type="text" 
+                placeholder="Search papers, authors, or journals..." 
+                className="w-full pl-10 pr-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
 
-           {/* Year Filter */}
-           <div className="relative min-w-[150px]">
-             <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
-             <select 
-               className="w-full pl-10 pr-8 py-2 rounded-lg border border-slate-300 bg-white focus:ring-2 focus:ring-emerald-500 outline-none appearance-none cursor-pointer"
-               value={selectedYear}
-               onChange={(e) => setSelectedYear(e.target.value === "All" ? "All" : Number(e.target.value))}
-             >
-               <option value="All">All Years</option>
-               {years.map(year => (
-                 <option key={year} value={year}>{year}</option>
-               ))}
-             </select>
-           </div>
+            {/* Year Filter */}
+            <div className="relative min-w-[150px]">
+              <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+              <select 
+                className="w-full pl-10 pr-8 py-2 rounded-lg border border-slate-300 bg-white focus:ring-2 focus:ring-emerald-500 outline-none appearance-none cursor-pointer"
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(e.target.value === "All" ? "All" : Number(e.target.value))}
+              >
+                <option value="All">All Years</option>
+                {years.map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
+              </select>
+            </div>
         </div>
       </div>
 
@@ -489,12 +519,12 @@ export default function PublicationsPage() {
 
                     {/* Meta Info (Journal & Year) */}
                     <div className="flex flex-wrap items-center gap-3 mt-2">
-                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-                         {pub.journal}
-                       </span>
-                       <span className="flex items-center text-sm text-slate-500">
-                          <Calendar className="h-3 w-3 mr-1" /> {pub.year}
-                       </span>
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                          {pub.journal}
+                        </span>
+                        <span className="flex items-center text-sm text-slate-500">
+                           <Calendar className="h-3 w-3 mr-1" /> {pub.year}
+                        </span>
                     </div>
                   </div>
 
