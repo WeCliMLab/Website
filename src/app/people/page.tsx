@@ -143,7 +143,7 @@ export default function PeoplePage() {
       name: "Deepak Singh",
       role: "MS Student",
       period: "May 2025 - Present",
-      project: "Spatio-temporal variability of cloud cover over indian regions",
+      project: "Spatio-temporal variability of cloud cover over Indian regions",
       email: "ms21268@iisermohali.ac.in"
     }
   ];
@@ -173,7 +173,7 @@ export default function PeoplePage() {
       current: "Post-Doctoral Fellow, University of Reading, UK"
     },
     {
-      name: "Dr. Rohtash",
+      name: "Dr. Rohtash Saini",
       role: "PhD Scholar (2020-2025)",
       badge: "PMRF", 
       current: "Post-Doctoral Fellow"
@@ -200,24 +200,14 @@ export default function PeoplePage() {
 
   const alumniJRF = [
     {
-      name: "Akash P.",
-      role: "JRF (2021)",
-      current: "PhD, POSTECH, South Korea"
-    },
+      name: "Sanjeev Singh",
+      role: "JRF (2023-2025)",
+      current: "PhD, NIT Rourkela"
+    }
     {
-      name: "Pravin Punde",
-      role: "JRF (2021-2022)",
-      current: "PhD, UiT The Arctic University of Norway"
-    },
-    {
-      name: "Debasish Mahapatra",
-      role: "JRF (2023)",
-      current: "PhD, Ghent University, Belgium"
-    },
-    {
-      name: "Sreehari K",
-      role: "JRF (2022-2023)",
-      current: "PhD, Wageningen University & Research, Netherlands"
+      name: "Nirvan Abhilash",
+      role: "JRF (2024)",
+      current: "PhD, University of Houston, USA"
     },
     {
       name: "Deepak P",
@@ -225,18 +215,28 @@ export default function PeoplePage() {
       current: "PhD, IIT Roorkee"
     },
     {
-      name: "Nirvan Abhilash",
-      role: "JRF (2024)",
-      current: "PhD, University of Houston, USA"
+      name: "Sreehari K",
+      role: "JRF (2022-2023)",
+      current: "PhD, Wageningen University & Research, Netherlands"
     },
     {
-      name: "Sanjeev Singh",
-      role: "JRF (2023-2025)",
-      current: "PhD, NIT Rourkela"
-    }
+      name: "Debasish Mahapatra",
+      role: "JRF (2023)",
+      current: "PhD, Ghent University, Belgium"
+    },
+    {
+      name: "Pravin Punde",
+      role: "JRF (2021-2022)",
+      current: "PhD, UiT The Arctic University of Norway"
+    },
+    {
+      name: "Akash P.",
+      role: "JRF (2021)",
+      current: "PhD, POSTECH, South Korea"
+    },
   ];
 
-  const prevMasters = [
+  const previousMasters = [
     {
       name: "Malavika M",
       role: "MS Student",
@@ -519,7 +519,7 @@ export default function PeoplePage() {
             {/* 7.4 Previous Masters Students - NO PHOTOS */}
             {prevMasters.length > 0 && (
                <AlumniGroup 
-                  title="Previous Masters Students" 
+                  title="Masters Students" 
                   members={prevMasters} 
                   showAvatar={false}
                />
@@ -528,7 +528,7 @@ export default function PeoplePage() {
             {/* 7.5 Previous Summer-Intern Students - NO PHOTOS */}
             {prevInterns.length > 0 && (
                <AlumniGroup 
-                  title="Previous Summer-Intern Students" 
+                  title="Summer-Intern Students" 
                   members={prevInterns} 
                   showAvatar={false} // Disable avatar to match method
                />
