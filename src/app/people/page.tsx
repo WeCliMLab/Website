@@ -236,7 +236,6 @@ export default function PeoplePage() {
     }
   ];
 
-  // --- PREVIOUS MASTERS STUDENTS (Detailed Data) ---
   const prevMasters = [
     {
       name: "Malavika M",
@@ -309,7 +308,79 @@ export default function PeoplePage() {
     }
   ];
 
-  const prevInterns: any[] = [];
+  // --- PREVIOUS SUMMER INTERNS (Detailed Data) ---
+  const prevInterns = [
+    {
+      name: "Shrirang Bhale",
+      role: "Summer Intern",
+      period: "May - July 2024",
+      project: "Vertical moist and thermodynamic structures from INSAT 3D remote sensing observation during extreme rainfall cases"
+    },
+    {
+      name: "Sidharth S S",
+      role: "Summer Intern",
+      period: "May - July 2024",
+      project: "AI/ML Frameworks for extreme rainfall events in Himachal Pradesh"
+    },
+    {
+      name: "Sulekha Komeravelli",
+      role: "Summer Intern",
+      period: "May - July 2023",
+      project: "Deaths due to coldwave conditions in northern states of India",
+      email: "ms22259@iisermohali.ac.in"
+    },
+    {
+      name: "Kartik Dixit",
+      role: "Summer Intern",
+      period: "May - July 2023",
+      project: "Extreme Weather conditions induced mortality in India",
+      email: "ms22230@iisermohali.ac.in"
+    },
+    {
+      name: "Joyjit Mandal",
+      role: "Summer Intern",
+      period: "May - July 2023",
+      project: "Rainfall prediction using Deep Learning",
+      email: "joyjitmandal1@gmail.com"
+    },
+    {
+      name: "Swastik Mishra",
+      role: "Summer Intern",
+      period: "May - July 2023",
+      project: "Rainfall prediction over the Himalayan Region using Deep Learning",
+      email: "swastikm26@gmail.com"
+    },
+    {
+      name: "Mohamed Junaid",
+      role: "Summer Intern",
+      period: "May - July 2023",
+      project: "Evaluation of HRRR forecasts on Extreme rainfall Events",
+      email: "mohamed.junaid@niser.ac.in"
+    },
+    {
+      name: "Manjima Mahesh",
+      role: "MS Student",
+      project: "Impact of aerosols transported from tropics to arctic on climate and monsoon",
+      email: "ms19082@iisermohali.ac.in"
+    },
+    {
+      name: "Nitu",
+      role: "MS Student",
+      project: "To explore importance and significance of weather and climate over Himalayan region",
+      email: "ms20086@iisermohali.ac.in"
+    },
+    {
+      name: "Ayush Kumar",
+      role: "MS Student",
+      project: "Downscaling of ocean fields by fusion of heterogeneous observations using Deep Learning algorithms",
+      email: "ms19038@iisermohali.ac.in"
+    },
+    {
+      name: "Abhirami",
+      role: "MS Student",
+      email: "ms18119@iisermohali.ac.in"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -446,18 +517,21 @@ export default function PeoplePage() {
             <AlumniGroup title="Junior Research Fellows" members={alumniJRF} />
 
             {/* 7.4 Previous Masters Students - NO PHOTOS */}
-            {/* Conditionally render only if there is data */}
             {prevMasters.length > 0 && (
                <AlumniGroup 
                   title="Previous Masters Students" 
                   members={prevMasters} 
-                  showAvatar={false} // Disable avatar for this group
+                  showAvatar={false}
                />
             )}
 
-            {/* 7.5 Previous Summer-Intern Students */}
+            {/* 7.5 Previous Summer-Intern Students - NO PHOTOS */}
             {prevInterns.length > 0 && (
-               <AlumniGroup title="Previous Summer-Intern Students" members={prevInterns} />
+               <AlumniGroup 
+                  title="Previous Summer-Intern Students" 
+                  members={prevInterns} 
+                  showAvatar={false} // Disable avatar to match method
+               />
             )}
 
           </div>
@@ -578,6 +652,14 @@ function AlumniGroup({
                       <BookOpen className="h-3 w-3 mt-0.5 flex-shrink-0" />
                       <span className="leading-tight">Project: {person.project}</span>
                   </div>
+                )}
+
+                {/* --- Email (Added Support) --- */}
+                {person.email && (
+                  <a href={`mailto:${person.email}`} className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-600 mt-2 transition-colors">
+                      <Mail className="h-3 w-3 flex-shrink-0" />
+                      <span className="truncate">{person.email}</span>
+                  </a>
                 )}
 
                 {/* --- Publications (Single String) --- */}
