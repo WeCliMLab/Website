@@ -16,57 +16,63 @@ import {
 // --- DATA: CONFERENCES ---
 const conferences = [
   {
+    title: "INTROMET 2025",
+    location: "IITM, Pune, Maharastra",
+    date: "November 18 – 20, 2025",
+    color: "from-blue-500 to-cyan-400"
+  },
+  {
     title: "AOGS 2025 (22nd Annual Meeting)",
     location: "Sands Expo & Convention Centre, Singapore",
-    date: "July 27 – Aug 1, 2025",
+    date: "July 27 – August 1, 2025",
     color: "from-blue-500 to-cyan-400"
   },
   {
     title: "Indo-German School on SLESS",
     location: "IIT Roorkee",
-    date: "Mar 3 – 7, 2025",
+    date: "March 3 – 7, 2025",
     color: "from-emerald-500 to-teal-400"
   },
   {
     title: "India - UK Climate Action Summit",
     location: "ISB, Mohali",
-    date: "Feb 2025",
+    date: "Feburary 2025",
     color: "from-indigo-500 to-purple-400"
   },
   {
     title: "EGU General Assembly 2024",
     location: "Vienna, Austria",
-    date: "Apr 2024",
+    date: "April 2024",
     color: "from-orange-400 to-red-400"
   },
   {
     title: "ICRC - CORDEX 2023",
     location: "IITM, Pune",
-    date: "Sep 2023",
+    date: "September 2023",
     color: "from-slate-600 to-slate-400"
   },
   {
     title: "AOGS 2023",
     location: "Singapore",
-    date: "Jul-Aug 2023",
+    date: "July-August 2023",
     color: "from-blue-500 to-blue-300"
   },
   {
     title: "EGU General Assembly 2023",
     location: "Vienna, Austria",
-    date: "Apr 2023",
+    date: "April 2023",
     color: "from-orange-400 to-amber-300"
   },
   {
     title: "FORESEED 2023",
     location: "IIT Roorkee",
-    date: "Jan 2023",
+    date: "January 2023",
     color: "from-emerald-600 to-green-500"
   },
   {
     title: "TROPMET 2022",
     location: "IISER Bhopal",
-    date: "Nov-Dec 2022",
+    date: "November 29-December 02 2022",
     color: "from-sky-500 to-indigo-500"
   }
 ];
@@ -74,18 +80,18 @@ const conferences = [
 // --- DATA: LAB VISITS ---
 const labVisits = [
   {
-    visitor: "Dr. Kieran M. R. Hunt",
-    role: "Research Scientist, University of Reading, UK",
-    date: "27 July 2023",
-    topic: "Talk on 'Western Disturbances and Climate Variability'",
-    imagePlaceholder: "KH"
-  },
-  {
     visitor: "Dr. Madhavan Nair Rajeevan",
     role: "Former Secretary, Ministry of Earth Sciences",
     date: "21 June 2023",
     topic: "Lab interaction and group discussion on Indian Monsoon",
     imagePlaceholder: "MR"
+  },
+  {
+    visitor: "Dr. Kieran M. R. Hunt",
+    role: "Research Scientist, University of Reading, UK",
+    date: "27 July 2023",
+    topic: "Talk on 'Western Disturbances and Climate Variability'",
+    imagePlaceholder: "KH"
   },
   {
     visitor: "Dr. Chandan Sarangi",
@@ -127,6 +133,12 @@ const activities = [
     title: "Weekly Presentations",
     desc: "Journal clubs and research updates every Friday.",
     icon: <Presentation className="h-8 w-8 text-white" />,
+    color: "from-blue-500 to-indigo-500"
+  }
+  {
+    title: "Lab Trips",
+    desc: "Enjoying the Nature.",
+    icon: <Calendar className="h-8 w-8 text-white" />,
     color: "from-blue-500 to-indigo-500"
   }
 ];
