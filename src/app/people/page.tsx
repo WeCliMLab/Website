@@ -67,16 +67,6 @@ export default function PeoplePage() {
     ]
   };
 
-  const postDocs = [
-    {
-      name: "Dr. Singuru Madhusai",
-      role: "Institute Post-Doctoral Fellow",
-      period: "May 2025 - Present",
-      interests: "NWP, Monsoons, Tropical Cyclones, Climate Variability",
-      email: "madhusai@iisermohali.ac.in"
-    }
-  ];
-
   const phdStudents = [
     {
       name: "Rohtash",
@@ -141,6 +131,16 @@ export default function PeoplePage() {
     }
   ];
 
+    const postDocs = [
+    {
+      name: "Dr. Singuru Madhusai",
+      role: "Institute Post-Doctoral Fellow",
+      period: "May 2025 - Present",
+      interests: "NWP, Monsoons, Tropical Cyclones, Climate Variability",
+      email: "madhusai@iisermohali.ac.in"
+    }
+  ];
+
   const masters = [
     {
       name: "Deepak Singh",
@@ -158,6 +158,14 @@ export default function PeoplePage() {
       badge: "PMRF",
       current: "Post-Doctoral Fellow, University of Reading, UK"
     },
+    {
+      name: "Rohtash",
+      role: "PhD Scholar (2020-2025)",
+      // period: "Aug 2020 - Present",
+      badge: "PMRF", 
+      current: "Post-Doctoral Fellow"
+      // interests: "Himalayan climate, Indian summer monsoon, Regional climate modelling",
+      // email: "ph20017@iisermohali.ac.in"
     {
       name: "Dr. Krishna Kumar Shukla",
       role: "Post-Doc (2020-2022)",
