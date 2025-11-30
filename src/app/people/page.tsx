@@ -109,7 +109,7 @@ export default function PeoplePage() {
       name: "Nikhil Hale",
       role: "JRF",
       period: "August 2024 - Present",
-      interests: "Climate Modelling, Climate extremes, Polar climate",
+      interests: "Climate Modelling, Climate Extremes, Polar climate",
       email: "nikhilhale4@gmail.com"
     },
     {
@@ -133,7 +133,7 @@ export default function PeoplePage() {
       name: "Dr. Singuru Madhusai",
       role: "Institute Post-Doctoral Fellow",
       period: "May 2025 - Present",
-      interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Variability",
+      interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Modelling and Climate Variability",
       email: "madhusai@iisermohali.ac.in"
     }
   ];
@@ -143,7 +143,7 @@ export default function PeoplePage() {
       name: "Deepak Singh",
       role: "MS Student",
       period: "May 2025 - Present",
-      project: "Spatio-temporal variability of cloud cover over Indian regions",
+      project: "Spatio-temporal variability of Cloud Cover over Indian Regions",
       email: "ms21268@iisermohali.ac.in"
     }
   ];
@@ -153,7 +153,7 @@ export default function PeoplePage() {
       name: "Rishikesh Katakam",
       role: "Summer Intern",
       period: "June - Present",
-      project: "Application of neural networks on predicting air pollutants in arid regions."
+      project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions."
     },
     {
       name: "Ksheetij Pandey",
@@ -169,14 +169,18 @@ export default function PeoplePage() {
     {
       name: "Dr. Nischal Sharma",
       role: "PhD Scholar (2020-2025)",
-      badge: "PMRF",
-      current: "Post-Doctoral Fellow, University of Reading, UK"
+      badge: "Prime Minister's Research Fellow (PMRF)",
+      interests: "Regional Climate Modelling, Indian Winter Monsoon, Extreme Events",
+      current: "Post-Doctoral Fellow, University of Reading, UK",
+      email: "ph19061@iisermohali.ac.in"
     },
     {
       name: "Dr. Rohtash Saini",
       role: "PhD Scholar (2020-2025)",
-      badge: "PMRF", 
-      current: "Post-Doctoral Fellow"
+      badge: "Prime Minister's Research Fellow (PMRF)", 
+      interests: "Himalayan Climate, Indian Summer Monsoon, Regional Climate Modelling",
+      current: "Post-Doctoral Fellow",
+      email: "ph20017@iisermohali.ac.in "
     }
   ];
 
