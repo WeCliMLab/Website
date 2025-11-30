@@ -38,7 +38,7 @@ const publicationsData = [
     year: 2025,
     title: "Declining summer circulation over the Eastern Mediterranean and Middle East",
     authors: "Gandham, H., Dasari, H.P., Luong, T.M., Attada, R. et al.",
-    journal: "npj Clim Atmos Sci",
+    journal: "npj climate and atmospheric science",
     doi: "https://doi.org/10.1038/s41612-025-01072-2"
   },
   {
@@ -66,7 +66,7 @@ const publicationsData = [
     year: 2025,
     title: "Multi-Physics Ensemble Framework for Representing Western Himalayan Precipitation Climatology and Extremes: An Assessment from WRF Model",
     authors: "Nischal, S., & R. Attada",
-    journal: "Wea. Forecasting",
+    journal: "Weather and Forecasting",
     doi: "https://doi.org/10.1175/WAF-D-24-0057.1"
   },
   {
@@ -80,14 +80,14 @@ const publicationsData = [
     year: 2025,
     title: "Strengthening of Indian Ocean Dipole-Rainfall Relationship in Sri Lanka After the 1980s",
     authors: "Kajakokulan, P., Jayawardena, S. & R. Attada",
-    journal: "Earth Syst Environ",
+    journal: "Earth Systems and Environment",
     doi: "https://doi.org/10.1007/s41748-025-00572-8"
   },
   {
     year: 2025,
     title: "High-Resolution Analysis of Severe Heat Wave Dynamics and Thermal Discomfort Across India",
     authors: "Lakshman, K., Nadimpalli, R., Srivastava, A., Osuri, K.K., Attada, R. and Parekh, A.",
-    journal: "Int J Climatol",
+    journal: "International Journal of Climatology",
     doi: "https://doi.org/10.1002/joc.8753"
   },
 
@@ -151,7 +151,7 @@ const publicationsData = [
   {
     year: 2024,
     title: "Contrasting influence of the 1997 and 2015 El Niño on the Indian Summer Monsoon Rainfall: Role of the Southern Hemisphere",
-    authors: "Mahendra, N., N. Chilukoti, J.S. Chowdary, et al.",
+    authors: "Mahendra, N., Chilukoti, N., Chowdary, J. S., Attada, R., Kunchala, R. K., & Bhaskaran, P. K.",
     journal: "Global and Planetary Change",
     doi: "https://doi.org/10.1016/j.gloplacha.2024.104601"
   },
@@ -366,6 +366,7 @@ const labMembers = [
   "Abhishek Kumar",
   "Pathaikara, A.", "Akash, P.", "Akash P",
   "Sreehari, K.",
+  "Pandidurai, D.",
   "Pravin, P.", "Punde P",
   "Mahapatra, D.", 
   "Singh, S.", 
