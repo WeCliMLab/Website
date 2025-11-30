@@ -172,7 +172,7 @@ export default function OpportunitiesPage() {
                         <ul className="space-y-2">
                             <li className="flex items-start gap-2 text-sm text-slate-600">
                                 <CheckCircle2 className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
-                                <span> Qualified in any National Eligibility Test (CSIR,UGC,GATE,JAM) .</span>
+                                <span> Qualified in any National Eligibility Test (CSIR/UGC/GATE/JAM) .</span>
                             </li>
                             
                         </ul>
@@ -202,7 +202,7 @@ export default function OpportunitiesPage() {
                         <Clock className="h-8 w-8" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-900">Short-Term</h2>
-                    <p className="text-amber-600 font-medium"> Interns</p>
+                    <p className="text-amber-600 font-medium"> Internships</p>
                 </div>
 
                 <div className="space-y-6 flex-grow relative z-10">
