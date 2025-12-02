@@ -312,13 +312,13 @@ export default function PeoplePage() {
     {
       name: "Rishikesh Katakam",
       role: "Summer Intern",
-      period: "June - Present",
+      period: "June - August 2025",
       project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions."
     },
     {
       name: "Ksheetij Pandey",
       role: "Summer Intern",
-      period: "June - Present",
+      period: "June - August 2025",
       project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India"
     },
     {
@@ -537,10 +537,10 @@ export default function PeoplePage() {
                />
             )}
 
-            {/* 7.5 Previous Summer-Intern Students */}
+            {/* 7.5 Previous Intern Students */}
             {prevInterns.length > 0 && (
                <AlumniGroup 
-                  title="Summer Intern Students" 
+                  title="Intern Students" 
                   members={prevInterns} 
                   showAvatar={false} // 
                />
