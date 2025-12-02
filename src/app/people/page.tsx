@@ -97,6 +97,16 @@ export default function PeoplePage() {
     }
   ];
 
+  const postDocs = [
+    {
+      name: "Dr. Singuru Madhusai",
+      role: "Institute Post-Doctoral Fellow",
+      period: "May 2025 - Present",
+      interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Modelling and Climate Variability",
+      email: "madhusai@iisermohali.ac.in"
+    }
+  ];
+
   const jrfs = [
     {
       name: "Akash Shit",
@@ -128,16 +138,6 @@ export default function PeoplePage() {
     }
   ];
 
-  const postDocs = [
-    {
-      name: "Dr. Singuru Madhusai",
-      role: "Institute Post-Doctoral Fellow",
-      period: "May 2025 - Present",
-      interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Modelling and Climate Variability",
-      email: "madhusai@iisermohali.ac.in"
-    }
-  ];
-
   const masters = [
     {
       name: "Deepak Singh",
@@ -148,19 +148,14 @@ export default function PeoplePage() {
     }
   ];
 
-  const summerProjects = [
+  const Interns = [
     {
-      name: "Rishikesh Katakam",
-      role: "Summer Intern",
+      name: "Pranay Chakraborty",
+      role: "Intern Student",
       period: "June - Present",
-      project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions."
+      project: "Precipitation-Convective vs Large-Scale."
     },
-    {
-      name: "Ksheetij Pandey",
-      role: "Summer Intern",
-      period: "June - Present",
-      project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India"
-    }
+    
   ];
 
   // --- ALUMNI DATA ---
@@ -312,8 +307,20 @@ export default function PeoplePage() {
     }
   ];
 
-  // --- PREVIOUS SUMMER INTERNS ---
+  // --- PREVIOUS INTERNS ---
   const prevInterns = [
+    {
+      name: "Rishikesh Katakam",
+      role: "Summer Intern",
+      period: "June - Present",
+      project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions."
+    },
+    {
+      name: "Ksheetij Pandey",
+      role: "Summer Intern",
+      period: "June - Present",
+      project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India"
+    },
     {
       name: "Shrirang Bhale",
       role: "Summer Intern",
@@ -462,7 +469,17 @@ export default function PeoplePage() {
           </div>
         </section>
 
-        {/* ================= 3. JUNIOR RESEARCH FELLOWS ================= */}
+        {/* ================= 3. POST-DOCTORAL FELLOWS ================= */}
+        <section>
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-emerald-500 pl-4">Post-Doctoral Fellows</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             {postDocs.map((person, idx) => (
+                <TeamCard key={idx} person={person} color="teal" />
+             ))}
+          </div>
+        </section>
+
+        {/* ================= 4. JUNIOR RESEARCH FELLOWS ================= */}
         <section>
            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -472,15 +489,6 @@ export default function PeoplePage() {
            </div>
         </section>
 
-        {/* ================= 4. POST-DOCTORAL FELLOWS ================= */}
-        <section>
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-emerald-500 pl-4">Post-Doctoral Fellows</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {postDocs.map((person, idx) => (
-                <TeamCard key={idx} person={person} color="teal" />
-             ))}
-          </div>
-        </section>
 
         {/* ================= 5. MASTERS STUDENTS ================= */}
         <section>
@@ -492,11 +500,11 @@ export default function PeoplePage() {
             </div>
         </section>
 
-        {/* ================= 6. SUMMER INTERN STUDENTS ================= */}
+        {/* ================= 6. INTERN STUDENTS ================= */}
         <section>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Summer Intern Students</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Intern Students</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {summerProjects.map((person, idx) => (
+                {Interns.map((person, idx) => (
                     <TeamCard key={idx} person={person} color="rose" />
                 ))}
             </div>
