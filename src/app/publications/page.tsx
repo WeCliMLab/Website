@@ -406,7 +406,7 @@ const AuthorList = ({ authors }: { authors: string }) => {
         return (
           <span 
             key={i} 
-            className={isMember ? "font-bold text-red-700" : ""} // Applied brick-red color here
+            className={isMember ? "font-bold text-blue-700" : ""} // Applied brick-red color here
           >
             {part}
           </span>
