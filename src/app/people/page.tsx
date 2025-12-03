@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import {
@@ -65,13 +67,10 @@ export default function PeoplePage() {
     role: "Principal Investigator",
     area: "Indian Monsoons, Weather and Climate Extremes, Climate Modelling and Data Assimilation",
     email: "rajuattada@iisermohali.ac.in",
+    image: "/images/people/rajuattada.jpg", // Ensure this file exists
     memberships: [
       "Royal Meteorological Society (RMetS)", "American Geophysical Union (AGU)", "Indian Meteorological Society (IMS)", "Ocean Society of India (OSI)", "Asia Oceania Geosciences Society (AOGS)", "South Asian Meteorological Association (SAMA)", "Japan Geoscience Union (JpGU)", "American Meteorological Society (AMS)"
     ],
-    // --- SOCIAL MEDIA CONFIGURATION ---
-    // STEP 1: Create a folder in your project: /public/images/icons/
-    // STEP 2: Add your PNG/JPG/SVG files there (e.g., google-scholar.png)
-    // STEP 3: Update the 'imageSrc' paths below to match your filenames.
     socials: [
       {
         name: "Google Scholar",
@@ -108,21 +107,24 @@ export default function PeoplePage() {
       period: "January 2021 - Present",
       badge: "Institute Research Fellow",
       interests: "Winter Weather Extremes, Cold waves, Arctic-midlatitude Teleconnections, WRF",
-      email: "ph20044@iisermohali.ac.in"
+      email: "ph20044@iisermohali.ac.in",
+      image: "" // Add image path here if available
     },
     {
       name: "Adil Muhammed I K",
       role: "PhD Scholar",
       period: "January 2025 - Present",
       interests: "Extreme Rainfall Events, Data Assimilation",
-      email: "ph24087@iisermohali.ac.in"
+      email: "ph24087@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Himanshu Pandey",
       role: "PhD Scholar",
       period: "August 2025 - Present",
       interests: "Extreme Events",
-      email: "ph25058@iisermohali.ac.in"
+      email: "ph25058@iisermohali.ac.in",
+      image: ""
     }
   ];
 
@@ -132,7 +134,8 @@ export default function PeoplePage() {
       role: "Institute Post-Doctoral Fellow",
       period: "May 2025 - Present",
       interests: "NWP, Indian Monsoons, Tropical Cyclones, Climate Modelling and Climate Variability",
-      email: "madhusai@iisermohali.ac.in"
+      email: "madhusai@iisermohali.ac.in",
+      image: ""
     }
   ];
 
@@ -142,28 +145,32 @@ export default function PeoplePage() {
       role: "JRF",
       period: "August 2024 - Present",
       interests: "Atmospheric Convection, Extreme Events Prediction",
-      email: "akashshet.dgp@gmail.com"
+      email: "akashshet.dgp@gmail.com",
+      image: ""
     },
     {
       name: "Nikhil Hale",
       role: "JRF",
       period: "August 2024 - Present",
       interests: "Climate Modelling, Climate Extremes, Polar climate",
-      email: "nikhilhale4@gmail.com"
+      email: "nikhilhale4@gmail.com",
+      image: ""
     },
     {
       name: "Shiv Shankar Singh",
       role: "JRF",
       period: "June 2025 - Present",
       interests: "Climate Modelling, AI/ML",
-      email: "shivshankar3679@gmail.com"
+      email: "shivshankar3679@gmail.com",
+      image: ""
     },
     {
       name: "Gopika V Gopal",
       role: "JRF",
       period: "November 2025 - Present",
       interests: "Himalayan Extreme Weather Events, Climate Projections, Climate Modelling, South Asian Summer Monsoon",
-      email: "gopikavgopal99@gmail.com"
+      email: "gopikavgopal99@gmail.com",
+      image: ""
     }
   ];
 
@@ -173,7 +180,8 @@ export default function PeoplePage() {
       role: "MS Student",
       period: "May 2025 - Present",
       project: "Spatio-temporal variability of Cloud Cover over Indian Regions",
-      email: "ms21268@iisermohali.ac.in"
+      email: "ms21268@iisermohali.ac.in",
+      image: ""
     }
   ];
 
@@ -182,9 +190,9 @@ export default function PeoplePage() {
       name: "Pranay Chakraborty",
       role: "Intern Student",
       period: "June - Present",
-      project: "Precipitation-Convective vs Large-Scale."
+      project: "Precipitation-Convective vs Large-Scale.",
+      image: ""
     },
-
   ];
 
   // --- ALUMNI DATA ---
@@ -196,7 +204,8 @@ export default function PeoplePage() {
       badge: "Prime Minister's Research Fellow (PMRF)",
       interests: "Regional Climate Modelling, Indian Winter Monsoon, Extreme Events",
       current: "Post-Doctoral Fellow, University of Reading, UK",
-      email: "ph19061@iisermohali.ac.in"
+      email: "ph19061@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Dr. Rohtash Saini",
@@ -204,7 +213,8 @@ export default function PeoplePage() {
       badge: "Prime Minister's Research Fellow (PMRF)",
       interests: "Himalayan Climate, Indian Summer Monsoon, Regional Climate Modelling",
       current: "Post-Doctoral Fellow",
-      email: "ph20017@iisermohali.ac.in "
+      email: "ph20017@iisermohali.ac.in ",
+      image: ""
     }
   ];
 
@@ -212,17 +222,20 @@ export default function PeoplePage() {
     {
       name: "Dr. Krishna Kumar Shukla",
       role: "Post-Doc (2020-2022)",
-      current: "Project Scientist D, IMD New Delhi"
+      current: "Project Scientist D, IMD New Delhi",
+      image: ""
     },
     {
       name: "Dr. Amita Kumari",
       role: "Post-Doc (2023)",
-      current: "Post Doctoral Researcher, Hebrew University of Jerusalem"
+      current: "Post Doctoral Researcher, Hebrew University of Jerusalem",
+      image: ""
     },
     {
       name: "Dr. Pawan Kumar Chaubey",
       role: "Post-Doc (2023-2024)",
-      current: "Research Fellow, NTU Singapore"
+      current: "Research Fellow, NTU Singapore",
+      image: ""
     }
   ];
 
@@ -230,37 +243,44 @@ export default function PeoplePage() {
     {
       name: "Akash P.",
       role: "JRF (2021)",
-      current: "PhD, POSTECH, South Korea"
+      current: "PhD, POSTECH, South Korea",
+      image: ""
     },
     {
       name: "Pravin Punde",
       role: "JRF (2021-2022)",
-      current: "PhD, UiT The Arctic University of Norway"
+      current: "PhD, UiT The Arctic University of Norway",
+      image: ""
     },
     {
       name: "Debasish Mahapatra",
       role: "JRF (2023)",
-      current: "PhD, Ghent University, Belgium"
+      current: "PhD, Ghent University, Belgium",
+      image: ""
     },
     {
       name: "Sreehari K",
       role: "JRF (2022-2023)",
-      current: "PhD, Wageningen University & Research, Netherlands"
+      current: "PhD, Wageningen University & Research, Netherlands",
+      image: ""
     },
     {
       name: "Deepak P",
       role: "JRF (2022-2023)",
-      current: "PhD, IIT Roorkee"
+      current: "PhD, IIT Roorkee",
+      image: ""
     },
     {
       name: "Nirvan Abhilash",
       role: "JRF (2024)",
-      current: "PhD, University of Houston, USA"
+      current: "PhD, University of Houston, USA",
+      image: ""
     },
     {
       name: "Sanjeev Singh",
       role: "JRF (2023-2025)",
-      current: "PhD, NIT Rourkela"
+      current: "PhD, NIT Rourkela",
+      image: ""
     },
   ];
 
@@ -269,19 +289,22 @@ export default function PeoplePage() {
       name: "Malavika M",
       role: "MS Student",
       period: "July 2024 - June 2025",
-      thesis: "Indian cold waves inferred from Indian highest resolution datasets"
+      thesis: "Indian cold waves inferred from Indian highest resolution datasets",
+      image: ""
     },
     {
       name: "Himanshu Jain",
       role: "MS Student",
       period: "July 2023 - June 2024",
-      thesis: "Federated Learning on non-iid data"
+      thesis: "Federated Learning on non-iid data",
+      image: ""
     },
     {
       name: "Ayush Kumar",
       role: "MS Student",
       period: "July 2023 - June 2024",
-      thesis: "Enhancement of Data assimilation process using Neural networks"
+      thesis: "Enhancement of Data assimilation process using Neural networks",
+      image: ""
     },
     {
       name: "Amitabha Satyajeet Govande",
@@ -289,7 +312,8 @@ export default function PeoplePage() {
       period: "August 2022 - August 2023",
       thesis: "Air pollution potential characteristics over India using reanalyses and machine learning approaches",
       current: "PhD, Institute of Risk Assessment Sciences, Utrecht University, the Netherlands",
-      publication: "Govande, A., Attada, R. & Shukla, K.K. Predicting PM2.5 levels over Indian metropolitan cities using Recurrent Neural Networks. Earth Sci Inform 18, 1 (2024). https://doi.org/10.1007/s12145-024-01491-4."
+      publication: "Govande, A., Attada, R. & Shukla, K.K. Predicting PM2.5 levels over Indian metropolitan cities using Recurrent Neural Networks. Earth Sci Inform 18, 1 (2024). https://doi.org/10.1007/s12145-024-01491-4.",
+      image: ""
     },
     {
       name: "Bajrang C.",
@@ -298,14 +322,16 @@ export default function PeoplePage() {
       interests: "Physical oceanography, Extreme Events",
       thesis: "Understanding the Monsoonal Extreme Rainfall events in Central India: Dynamics, Thermodynamics and Long-Term Climate Drivers",
       current: "PhD, University of Melbourne, Australia",
-      publication: "Bajrang, C., Attada, R. & Goswami, B.N. Possible factors for the recent changes in frequency of central Indian Summer Monsoon precipitation extremes during 2005–2020. npj Climate and Atmospheric Science 6, 120 (2023). https://doi.org/10.1038/s41612-023-00450-y"
+      publication: "Bajrang, C., Attada, R. & Goswami, B.N. Possible factors for the recent changes in frequency of central Indian Summer Monsoon precipitation extremes during 2005–2020. npj Climate and Atmospheric Science 6, 120 (2023). https://doi.org/10.1038/s41612-023-00450-y",
+      image: ""
     },
     {
       name: "Meher Sanjana",
       role: "MS Student",
       period: "January 2021 - December 2021",
       interests: "Data science, Machine learning",
-      thesis: "Prediction of winter rainfall over North-Western India using Artificial Neural Network approach"
+      thesis: "Prediction of winter rainfall over North-Western India using Artificial Neural Network approach",
+      image: ""
     },
     {
       name: "Deepanshu Aggarwal",
@@ -316,7 +342,8 @@ export default function PeoplePage() {
       publications: [
         "Aggarwal, D., Attada, R., Shukla, K. K., Chakraborty, R., & Kunchala, R. K. (2022). Monsoon precipitation characteristics and extreme precipitation events over Northwest India using Indian high resolution regional reanalysis. Atmospheric Research, 105993. https://doi.org/10.1016/j.atmosres.2021.105993",
         "Aggarwal, D., Chakraborty, R. & Attada, R. Investigating bi-decadal precipitation changes over the Northwest Himalayas during the pre-monsoon: role of Pacific decadal oscillations. Clim Dyn (2023). https://doi.org/10.1007/s00382-023-06969-3"
-      ]
+      ],
+      image: ""
     },
     {
       name: "Abhishek Kumar",
@@ -324,7 +351,8 @@ export default function PeoplePage() {
       period: "August 2020 - May 2021",
       thesis: "Thermal Stress over north-western India: Climatology, Trends and Extremes",
       current: "MBA, Indian Institute of Management Udaipur",
-      publication: "K.K. Shukla, Attada, R., Abhishek Kumar, Kunchala, R. K., Sanikommu Sivareddy, (2022). Comprehensive analysis of thermal stress over northwest India: Climatology, trends and extremes, 44, Urban Climate. https://doi.org/10.1016/j.uclim.2022.101188"
+      publication: "K.K. Shukla, Attada, R., Abhishek Kumar, Kunchala, R. K., Sanikommu Sivareddy, (2022). Comprehensive analysis of thermal stress over northwest India: Climatology, trends and extremes, 44, Urban Climate. https://doi.org/10.1016/j.uclim.2022.101188",
+      image: ""
     },
     {
       name: "K Lakshman",
@@ -332,7 +360,8 @@ export default function PeoplePage() {
       period: "2020-2021",
       thesis: "Study of Heat Wave Characteristics Over East Coast of India using High-Resolution IMDAA Reanalysis",
       current: "PhD, National Institute of Technology Rourkela",
-      publication: "Lakshman, K., Nadimpalli, R., Srivastava, A., Osuri, K.K., Attada, R. and Parekh, A. (2025), High-Resolution Analysis of Severe Heat Wave Dynamics and Thermal Discomfort Across India. Int J Climatol. https://doi.org/10.1002/joc.8753."
+      publication: "Lakshman, K., Nadimpalli, R., Srivastava, A., Osuri, K.K., Attada, R. and Parekh, A. (2025), High-Resolution Analysis of Severe Heat Wave Dynamics and Thermal Discomfort Across India. Int J Climatol. https://doi.org/10.1002/joc.8753.",
+      image: ""
     }
   ];
 
@@ -342,83 +371,96 @@ export default function PeoplePage() {
       name: "Rishikesh Katakam",
       role: "Summer Intern",
       period: "June - August 2025",
-      project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions."
+      project: "Application of Neural Networks on Predicting Air Pollutants in Arid Regions.",
+      image: ""
     },
     {
       name: "Ksheetij Pandey",
       role: "Summer Intern",
       period: "June - August 2025",
-      project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India"
+      project: "Assessment of ENSO and IOD Impacts on Rainfall Variability over Northwest India",
+      image: ""
     },
     {
       name: "Shrirang Bhale",
       role: "Summer Intern",
       period: "May - July 2024",
-      project: "Vertical moist and thermodynamic structures from INSAT 3D remote sensing observation during extreme rainfall cases"
+      project: "Vertical moist and thermodynamic structures from INSAT 3D remote sensing observation during extreme rainfall cases",
+      image: ""
     },
     {
       name: "Sidharth S S",
       role: "Summer Intern",
       period: "May - July 2024",
-      project: "AI/ML Frameworks for extreme rainfall events in Himachal Pradesh"
+      project: "AI/ML Frameworks for extreme rainfall events in Himachal Pradesh",
+      image: ""
     },
     {
       name: "Sulekha Komeravelli",
       role: "Summer Intern",
       period: "May - July 2023",
       project: "Deaths due to coldwave conditions in northern states of India",
-      email: "ms22259@iisermohali.ac.in"
+      email: "ms22259@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Kartik Dixit",
       role: "Summer Intern",
       period: "May - July 2023",
       project: "Extreme Weather conditions induced mortality in India",
-      email: "ms22230@iisermohali.ac.in"
+      email: "ms22230@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Joyjit Mandal",
       role: "Summer Intern",
       period: "May - July 2023",
       project: "Rainfall prediction using Deep Learning",
-      email: "joyjitmandal1@gmail.com"
+      email: "joyjitmandal1@gmail.com",
+      image: ""
     },
     {
       name: "Swastik Mishra",
       role: "Summer Intern",
       period: "May - July 2023",
       project: "Rainfall prediction over the Himalayan Region using Deep Learning",
-      email: "swastikm26@gmail.com"
+      email: "swastikm26@gmail.com",
+      image: ""
     },
     {
       name: "Mohamed Junaid",
       role: "Summer Intern",
       period: "May - July 2023",
       project: "Evaluation of HRRR forecasts on Extreme rainfall Events",
-      email: "mohamed.junaid@niser.ac.in"
+      email: "mohamed.junaid@niser.ac.in",
+      image: ""
     },
     {
       name: "Manjima Mahesh",
       role: "MS Student",
       project: "Impact of aerosols transported from tropics to arctic on climate and monsoon",
-      email: "ms19082@iisermohali.ac.in"
+      email: "ms19082@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Nitu",
       role: "MS Student",
       project: "To explore importance and significance of weather and climate over Himalayan region",
-      email: "ms20086@iisermohali.ac.in"
+      email: "ms20086@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Ayush Kumar",
       role: "MS Student",
       project: "Downscaling of ocean fields by fusion of heterogeneous observations using Deep Learning algorithms",
-      email: "ms19038@iisermohali.ac.in"
+      email: "ms19038@iisermohali.ac.in",
+      image: ""
     },
     {
       name: "Abhirami",
       role: "MS Student",
-      email: "ms18119@iisermohali.ac.in"
+      email: "ms18119@iisermohali.ac.in",
+      image: ""
     }
   ];
 
@@ -445,7 +487,18 @@ export default function PeoplePage() {
 
             {/* PI Avatar */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
-              <AvatarPlaceholder name={pi.name} size="lg" color="emerald" />
+              {pi.image ? (
+                <div className="relative h-32 w-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                  <Image
+                    src={pi.image}
+                    alt={pi.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <AvatarPlaceholder name={pi.name} size="lg" color="emerald" />
+              )}
             </div>
 
             {/* PI Content */}
@@ -474,7 +527,7 @@ export default function PeoplePage() {
                     href={`mailto:${pi.email}`}
                   />
 
-                  {/* --- SOCIAL MEDIA SECTION (MOVED HERE) --- */}
+                  {/* --- SOCIAL MEDIA SECTION --- */}
                   <div>
                     <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Connect</p>
                     <div className="flex flex-wrap gap-3">
@@ -487,8 +540,6 @@ export default function PeoplePage() {
                           className="relative h-8 w-8 rounded-full overflow-hidden hover:opacity-80 transition-opacity bg-slate-100 border border-slate-200"
                           title={social.name}
                         >
-                          {/* Image Component for Custom Icons */}
-                          {/* Uses a fallback to gray if image missing, but user can upload to /public/images/icons/ */}
                           <Image
                             src={social.imageSrc}
                             alt={social.name}
@@ -603,7 +654,7 @@ export default function PeoplePage() {
               <AlumniGroup
                 title="Intern Students"
                 members={prevInterns}
-                showAvatar={false} // 
+                showAvatar={false}
               />
             )}
 
@@ -621,7 +672,21 @@ function TeamCard({ person, color, compact = false }: { person: any, color: stri
   return (
     <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
       <div className="flex items-start justify-between mb-4">
-        <AvatarPlaceholder name={person.name} size="md" color={color} />
+        
+        {/* --- IMAGE / AVATAR LOGIC --- */}
+        {person.image ? (
+          <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-slate-100 shadow-sm flex-shrink-0">
+            <Image
+              src={person.image}
+              alt={person.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <AvatarPlaceholder name={person.name} size="md" color={color} />
+        )}
+
         {person.badge && (
           <span className="px-2 py-1 bg-yellow-50 text-yellow-700 text-[10px] font-bold uppercase tracking-wide border border-yellow-100 rounded-full">
             {person.badge}
@@ -659,7 +724,7 @@ function AlumniGroup({
   title,
   members,
   color = "slate",
-  showAvatar = true // Default to showing avatar
+  showAvatar = true
 }: {
   title: string,
   members: any[],
@@ -675,10 +740,21 @@ function AlumniGroup({
         {members.map((person, idx) => (
           <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4 h-full">
 
-            {/* Only render Avatar if showAvatar is true */}
+            {/* Render Image or Avatar if showAvatar is true */}
             {showAvatar && (
-              <div className="mt-1">
-                <AvatarPlaceholder name={person.name} size="sm" color={color} />
+              <div className="mt-1 flex-shrink-0">
+                {person.image ? (
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden border border-slate-200">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <AvatarPlaceholder name={person.name} size="sm" color={color} />
+                )}
               </div>
             )}
 
