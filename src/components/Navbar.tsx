@@ -16,14 +16,15 @@ const Navbar = () => {
   // but displayed 'Opportunities' correctly in text.
   const navLinks = [
     { name: 'Research', href: '/research' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Publications', href: '/publications' },
     { name: 'People', href: '/people' },
+    { name: 'Publications', href: '/publications' },
     { name: 'Teaching', href: '/teaching' },
-    // { name: 'Resources', href: '/resources' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Outreach', href: '/outreach' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Opportunities', href: '/oppurtunities' }, 
+    { name: 'Gallery', href: '/gallery' },
+    
   ];
 
   return (

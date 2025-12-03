@@ -1,13 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
 import { 
   Mail, 
   GraduationCap, 
   Award, 
-  MapPin, 
-  User, 
   Users, 
   Briefcase, 
-  Globe,
   BookOpen,
   FileText,
   PenTool
@@ -69,6 +67,37 @@ export default function PeoplePage() {
     email: "rajuattada@iisermohali.ac.in",
     memberships: [
       "Royal Meteorological Society (RMetS)", "AGU", "IMS", "Ocean Society of India", "AOGS", "SAMA", "JpGU", "AMS"
+    ],
+    // --- SOCIAL MEDIA CONFIGURATION ---
+    // STEP 1: Create a folder in your project: /public/images/icons/
+    // STEP 2: Add your PNG/JPG/SVG files there (e.g., google-scholar.png)
+    // STEP 3: Update the 'imageSrc' paths below to match your filenames.
+    socials: [
+      { 
+        name: "Google Scholar", 
+        imageSrc: "/images/icons/google-scholar.png", 
+        href: "https://scholar.google.co.in/citations?user=rajuattada" 
+      },
+      { 
+        name: "ResearchGate", 
+        imageSrc: "/images/icons/researchgate.png", 
+        href: "https://www.researchgate.net/profile/Raju-Attada" 
+      },
+      { 
+        name: "ORCID", 
+        imageSrc: "/images/icons/orcid.png", 
+        href: "https://orcid.org/" 
+      },
+      { 
+        name: "LinkedIn", 
+        imageSrc: "/images/icons/linkedin.png", 
+        href: "https://www.linkedin.com/" 
+      },
+      { 
+        name: "X (Twitter)", 
+        imageSrc: "/images/icons/x.png", 
+        href: "https://x.com/" 
+      }
     ]
   };
 
@@ -428,6 +457,8 @@ export default function PeoplePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
+                  
+                  {/* Research Areas */}
                   <div className="flex items-start gap-3">
                     <GraduationCap className="h-5 w-5 text-slate-400 mt-1" />
                     <div>
@@ -435,13 +466,43 @@ export default function PeoplePage() {
                       <p className="text-slate-600">{pi.area}</p>
                     </div>
                   </div>
+                  
+                  {/* Email */}
                   <ContactLink 
                     icon={<Mail className="h-4 w-4" />} 
                     text={pi.email} 
                     href={`mailto:${pi.email}`} 
                   />
+
+                  {/* --- SOCIAL MEDIA SECTION (MOVED HERE) --- */}
+                  <div>
+                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Connect</p>
+                    <div className="flex flex-wrap gap-3">
+                      {pi.socials.map((social, i) => (
+                        <a 
+                          key={i} 
+                          href={social.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="relative h-8 w-8 rounded-full overflow-hidden hover:opacity-80 transition-opacity bg-slate-100 border border-slate-200"
+                          title={social.name}
+                        >
+                          {/* Image Component for Custom Icons */}
+                          {/* Uses a fallback to gray if image missing, but user can upload to /public/images/icons/ */}
+                          <Image 
+                            src={social.imageSrc} 
+                            alt={social.name}
+                            fill
+                            className="object-cover p-1"
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
 
+                {/* Memberships Column */}
                 <div className="space-y-2">
                     <p className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-2 flex items-center gap-2">
                       <Award className="h-4 w-4" /> Memberships

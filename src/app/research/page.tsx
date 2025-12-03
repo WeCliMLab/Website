@@ -10,7 +10,9 @@ import {
   Server, 
   Activity, 
   HardDrive, 
-  Cpu
+  Cpu,
+  GitMerge,
+  Globe
 } from 'lucide-react';
 
 export default function ResearchPage() {
@@ -53,9 +55,12 @@ export default function ResearchPage() {
     },
     {
       title: "NWP and Data Assimilation",
-      subtitle: "WRF Model, Regional Weather Forecasting, Extreme Weather Events",
-      icon: <GitMerge className="h-5 w-5" />
-    }, 
+      subtitle: "WRF Model & Forecasting",
+      icon: <Globe className="h-5 w-5" />, 
+      image: "/images/data-assimilation.jpg", // Make sure to add a dummy image here later
+      placeholderColor: "from-indigo-200 via-purple-100 to-white",
+      content: "We utilize advanced Numerical Weather Prediction (NWP) models like WRF to forecast regional weather. Our research focuses on Data Assimilation techniques—integrating real-time observational data (satellite, radar) into models to minimize initial condition errors and improve the accuracy of extreme weather event predictions."
+    },
     {
       title: "Aerosols & Dust Storms",
       subtitle: "Investigation of Variability",

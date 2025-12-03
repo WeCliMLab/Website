@@ -341,14 +341,14 @@ const publicationsData = [
     authors: "Raju Attada, Hari Prasad Dasari, Anant Parekh et al.",
     journal: "Climate Dynamics",
     doi: "https://doi.org/10.1007/s00382-018-4333-x"
-  },
-  {
-    year: 2018,
-    title: "Reanalysis of the Indian Summer Monsoon: Four-dimensional data assimilation of AIRS retrievals in a regional data assimilation and modeling framework",
-    authors: "Raju Attada, Anant Parekh, J. S. Chowdary and C.Gnanaseelan",
-    journal: "Climate Dynamics",
-    doi: "https://doi.org/10.1007/s00382-017-3781-z"
   }
+  // {
+  //   year: 2018,
+  //   title: "Reanalysis of the Indian Summer Monsoon: Four-dimensional data assimilation of AIRS retrievals in a regional data assimilation and modeling framework",
+  //   authors: "Raju Attada, Anant Parekh, J. S. Chowdary and C.Gnanaseelan",
+  //   journal: "Climate Dynamics",
+  //   doi: "https://doi.org/10.1007/s00382-017-3781-z"
+  // }
 ];
 
 // --- HELPER: Detect Lab Members ---
@@ -448,10 +448,11 @@ export default function PublicationsPage() {
               </p>
             </div>
             
-            {/* Stats Badge */}
+            {/* Stats Badge - UPDATED TO BE DYNAMIC */}
             <div className="flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-100 rounded-lg text-emerald-700 font-bold">
                <BookOpen className="h-5 w-5" />
-               <span>{publicationsData.length}+ Papers</span>
+               {/* This automatically updates when you add new items to the array */}
+               <span>{publicationsData.length} Papers</span>
             </div>
           </div>
         </div>
