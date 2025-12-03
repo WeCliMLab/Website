@@ -114,7 +114,7 @@ export default function PeoplePage() {
       name: "Adil Muhammed I K",
       role: "PhD Scholar",
       period: "January 2025 - Present",
-      interests: "Extreme Rainfall Events, Data Assimilation",
+      interests: "Extreme Rainfall Events, Data Assimilation, WRF",
       email: "ph24087@iisermohali.ac.in"
     },
     {
