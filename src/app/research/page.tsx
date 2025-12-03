@@ -52,8 +52,9 @@ export default function ResearchPage() {
       content: "Winter precipitation is observed in the northern parts of Indian subcontinent through December to March due to the passage of western disturbances. This precipitation is a primary irrigational source for agriculture and maintains the snow cover of Himalayan glaciers. We aim to understand and simulate the winter precipitation dynamics and its key mechanisms over the Himalayas."
     },
     {
-      title: "Data Assimilation",
-      subtitle: "3D and 4D vars",
+      title: "NWP and Data Assimilation",
+      subtitle: "WRF Model, Regional Weather Forecasting, Extreme Weather Events",
+      <GitMerge className="h-5 w-5" />
     }, 
     {
       title: "Aerosols & Dust Storms",
