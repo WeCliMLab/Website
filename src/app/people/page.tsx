@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import { 
-  Mail, 
-  GraduationCap, 
-  Award, 
-  Users, 
-  Briefcase, 
+import {
+  Mail,
+  GraduationCap,
+  Award,
+  Users,
+  Briefcase,
   BookOpen,
   FileText,
   PenTool
@@ -47,8 +47,8 @@ const AvatarPlaceholder = ({ name, size = "md", color = "blue" }: { name: string
 
 // 2. Social/Contact Button
 const ContactLink = ({ icon, text, href }: { icon: React.ReactNode, text: string, href: string }) => (
-  <a 
-    href={href} 
+  <a
+    href={href}
     className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-emerald-600 transition-colors"
   >
     {icon}
@@ -59,44 +59,44 @@ const ContactLink = ({ icon, text, href }: { icon: React.ReactNode, text: string
 export default function PeoplePage() {
 
   // --- DATA ---
-  
+
   const pi = {
     name: "Dr. Raju Attada",
     role: "Principal Investigator",
     area: "Indian Monsoons, Weather and Climate Extremes, Climate Modelling and Data Assimilation",
     email: "rajuattada@iisermohali.ac.in",
     memberships: [
-      "Royal Meteorological Society (RMetS)", "AGU", "IMS", "Ocean Society of India", "AOGS", "SAMA", "JpGU", "AMS"
+      "Royal Meteorological Society (RMetS)", "American Geophysical Union (AGU)", "Indian Meteorological Society (IMS)", "Ocean Society of India (OSI)", "Asia Oceania Geosciences Society (AOGS)", "South Asian Meteorological Association (SAMA)", "Japan Geoscience Union (JpGU)", "American Meteorological Society (AMS)"
     ],
     // --- SOCIAL MEDIA CONFIGURATION ---
     // STEP 1: Create a folder in your project: /public/images/icons/
     // STEP 2: Add your PNG/JPG/SVG files there (e.g., google-scholar.png)
     // STEP 3: Update the 'imageSrc' paths below to match your filenames.
     socials: [
-      { 
-        name: "Google Scholar", 
-        imageSrc: "/images/icons/google-scholar.png", 
-        href: "https://scholar.google.co.in/citations?user=rajuattada" 
+      {
+        name: "Google Scholar",
+        imageSrc: "/images/icons/google-scholar.png",
+        href: "https://scholar.google.co.in/citations?user=rajuattada"
       },
-      { 
-        name: "ResearchGate", 
-        imageSrc: "/images/icons/researchgate.png", 
-        href: "https://www.researchgate.net/profile/Raju-Attada" 
+      {
+        name: "ResearchGate",
+        imageSrc: "/images/icons/research-gate.png",
+        href: "https://www.researchgate.net/profile/Raju-Attada"
       },
       { 
         name: "ORCID", 
         imageSrc: "/images/icons/orcid.png", 
-        href: "https://orcid.org/" 
+        href: "https://orcid.org/0000-0002-6194-4561" 
       },
       { 
         name: "LinkedIn", 
         imageSrc: "/images/icons/linkedin.png", 
-        href: "https://www.linkedin.com/" 
+        href: "https://www.linkedin.com/in/raju-attada-b421b6a5/" 
       },
       { 
         name: "X (Twitter)", 
-        imageSrc: "/images/icons/x.png", 
-        href: "https://x.com/" 
+        imageSrc: "/images/icons/twitter.png", 
+        href: "https://x.com/rajuattada1" 
       }
     ]
   };
@@ -184,7 +184,7 @@ export default function PeoplePage() {
       period: "June - Present",
       project: "Precipitation-Convective vs Large-Scale."
     },
-    
+
   ];
 
   // --- ALUMNI DATA ---
@@ -201,7 +201,7 @@ export default function PeoplePage() {
     {
       name: "Dr. Rohtash Saini",
       role: "PhD Scholar (2020-2025)",
-      badge: "Prime Minister's Research Fellow (PMRF)", 
+      badge: "Prime Minister's Research Fellow (PMRF)",
       interests: "Himalayan Climate, Indian Summer Monsoon, Regional Climate Modelling",
       current: "Post-Doctoral Fellow",
       email: "ph20017@iisermohali.ac.in "
@@ -424,7 +424,7 @@ export default function PeoplePage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      
+
       {/* ================= HERO / HEADER ================= */}
       <div className="bg-white border-b border-slate-200 pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -442,10 +442,10 @@ export default function PeoplePage() {
         {/* ================= 1. PI SECTION ================= */}
         <section>
           <div className="bg-white rounded-2xl border border-slate-200 p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-10 items-start">
-            
+
             {/* PI Avatar */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
-               <AvatarPlaceholder name={pi.name} size="lg" color="emerald" />
+              <AvatarPlaceholder name={pi.name} size="lg" color="emerald" />
             </div>
 
             {/* PI Content */}
@@ -457,7 +457,7 @@ export default function PeoplePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                  
+
                   {/* Research Areas */}
                   <div className="flex items-start gap-3">
                     <GraduationCap className="h-5 w-5 text-slate-400 mt-1" />
@@ -466,12 +466,12 @@ export default function PeoplePage() {
                       <p className="text-slate-600">{pi.area}</p>
                     </div>
                   </div>
-                  
+
                   {/* Email */}
-                  <ContactLink 
-                    icon={<Mail className="h-4 w-4" />} 
-                    text={pi.email} 
-                    href={`mailto:${pi.email}`} 
+                  <ContactLink
+                    icon={<Mail className="h-4 w-4" />}
+                    text={pi.email}
+                    href={`mailto:${pi.email}`}
                   />
 
                   {/* --- SOCIAL MEDIA SECTION (MOVED HERE) --- */}
@@ -479,18 +479,18 @@ export default function PeoplePage() {
                     <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Connect</p>
                     <div className="flex flex-wrap gap-3">
                       {pi.socials.map((social, i) => (
-                        <a 
-                          key={i} 
-                          href={social.href} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
+                        <a
+                          key={i}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="relative h-8 w-8 rounded-full overflow-hidden hover:opacity-80 transition-opacity bg-slate-100 border border-slate-200"
                           title={social.name}
                         >
                           {/* Image Component for Custom Icons */}
                           {/* Uses a fallback to gray if image missing, but user can upload to /public/images/icons/ */}
-                          <Image 
-                            src={social.imageSrc} 
+                          <Image
+                            src={social.imageSrc}
                             alt={social.name}
                             fill
                             className="object-cover p-1"
@@ -504,16 +504,16 @@ export default function PeoplePage() {
 
                 {/* Memberships Column */}
                 <div className="space-y-2">
-                    <p className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-2 flex items-center gap-2">
-                      <Award className="h-4 w-4" /> Memberships
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {pi.memberships.map((m) => (
-                        <span key={m} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">
-                          {m}
-                        </span>
-                      ))}
-                    </div>
+                  <p className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-2 flex items-center gap-2">
+                    <Award className="h-4 w-4" /> Memberships
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {pi.memberships.map((m) => (
+                      <span key={m} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">
+                        {m}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -524,9 +524,9 @@ export default function PeoplePage() {
         <section>
           <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-500 pl-4">Graduate Students (PhD)</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {phdStudents.map((person, idx) => (
-                <TeamCard key={idx} person={person} color="indigo" />
-             ))}
+            {phdStudents.map((person, idx) => (
+              <TeamCard key={idx} person={person} color="indigo" />
+            ))}
           </div>
         </section>
 
@@ -534,41 +534,41 @@ export default function PeoplePage() {
         <section>
           <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-emerald-500 pl-4">Post-Doctoral Fellows</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {postDocs.map((person, idx) => (
-                <TeamCard key={idx} person={person} color="teal" />
-             ))}
+            {postDocs.map((person, idx) => (
+              <TeamCard key={idx} person={person} color="teal" />
+            ))}
           </div>
         </section>
 
         {/* ================= 4. JUNIOR RESEARCH FELLOWS ================= */}
         <section>
-           <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {jrfs.map((person, idx) => (
-                  <TeamCard key={idx} person={person} color="amber" />
-              ))}
-           </div>
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-amber-500 pl-4">Junior Research Fellows</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {jrfs.map((person, idx) => (
+              <TeamCard key={idx} person={person} color="amber" />
+            ))}
+          </div>
         </section>
 
 
         {/* ================= 5. MASTERS STUDENTS ================= */}
         <section>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-500 pl-4">Masters Students</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {masters.map((person, idx) => (
-                    <TeamCard key={idx} person={person} color="slate" />
-                ))}
-            </div>
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-500 pl-4">Masters Students</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {masters.map((person, idx) => (
+              <TeamCard key={idx} person={person} color="slate" />
+            ))}
+          </div>
         </section>
 
         {/* ================= 6. INTERN STUDENTS ================= */}
         <section>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Intern Students</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Interns.map((person, idx) => (
-                    <TeamCard key={idx} person={person} color="rose" />
-                ))}
-            </div>
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-rose-500 pl-4">Current Intern Students</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Interns.map((person, idx) => (
+              <TeamCard key={idx} person={person} color="rose" />
+            ))}
+          </div>
         </section>
 
         {/* ================= 7. ALUMNI & PAST MEMBERS SECTION ================= */}
@@ -577,9 +577,9 @@ export default function PeoplePage() {
             <Users className="h-6 w-6 text-slate-400" />
             <h3 className="text-3xl font-bold text-slate-900">Alumni & Past Members</h3>
           </div>
-          
+
           <div className="space-y-12">
-            
+
             {/* 7.1 PhD Graduates */}
             <AlumniGroup title="PhD Graduates" members={alumniPhD} />
 
@@ -591,20 +591,20 @@ export default function PeoplePage() {
 
             {/* 7.4 Previous Masters Students */}
             {previousMasters.length > 0 && (
-               <AlumniGroup 
-                  title="Masters Students" 
-                  members={previousMasters} 
-                  showAvatar={false}
-               />
+              <AlumniGroup
+                title="Masters Students"
+                members={previousMasters}
+                showAvatar={false}
+              />
             )}
 
             {/* 7.5 Previous Intern Students */}
             {prevInterns.length > 0 && (
-               <AlumniGroup 
-                  title="Intern Students" 
-                  members={prevInterns} 
-                  showAvatar={false} // 
-               />
+              <AlumniGroup
+                title="Intern Students"
+                members={prevInterns}
+                showAvatar={false} // 
+              />
             )}
 
           </div>
@@ -620,49 +620,49 @@ export default function PeoplePage() {
 function TeamCard({ person, color, compact = false }: { person: any, color: string, compact?: boolean }) {
   return (
     <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-       <div className="flex items-start justify-between mb-4">
-          <AvatarPlaceholder name={person.name} size="md" color={color} />
-          {person.badge && (
-            <span className="px-2 py-1 bg-yellow-50 text-yellow-700 text-[10px] font-bold uppercase tracking-wide border border-yellow-100 rounded-full">
-                {person.badge}
-            </span>
-          )}
-       </div>
-       <div>
-          <h4 className="text-xl font-bold text-slate-900">{person.name}</h4>
-          <p className={`text-slate-500 font-medium mb-4 ${compact ? 'text-xs' : 'text-sm'}`}>
-            {person.role} {person.period ? `• ${person.period}` : ''}
+      <div className="flex items-start justify-between mb-4">
+        <AvatarPlaceholder name={person.name} size="md" color={color} />
+        {person.badge && (
+          <span className="px-2 py-1 bg-yellow-50 text-yellow-700 text-[10px] font-bold uppercase tracking-wide border border-yellow-100 rounded-full">
+            {person.badge}
+          </span>
+        )}
+      </div>
+      <div>
+        <h4 className="text-xl font-bold text-slate-900">{person.name}</h4>
+        <p className={`text-slate-500 font-medium mb-4 ${compact ? 'text-xs' : 'text-sm'}`}>
+          {person.role} {person.period ? `• ${person.period}` : ''}
+        </p>
+        <div className="mb-6">
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">
+            {person.project ? 'Project' : 'Research Interests'}
           </p>
-          <div className="mb-6">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">
-                {person.project ? 'Project' : 'Research Interests'}
-            </p>
-            <p className="text-sm text-slate-700 leading-snug">
-                {person.project || person.interests}
-            </p>
-          </div>
-       </div>
-       <div className="mt-auto pt-4 border-t border-slate-100">
-         {person.email ? (
-           <a href={`mailto:${person.email}`} className="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
-              <Mail className="h-4 w-4" />
-              <span className="truncate">{person.email}</span>
-           </a>
-         ) : <span className="h-4 block"></span>}
-       </div>
+          <p className="text-sm text-slate-700 leading-snug">
+            {person.project || person.interests}
+          </p>
+        </div>
+      </div>
+      <div className="mt-auto pt-4 border-t border-slate-100">
+        {person.email ? (
+          <a href={`mailto:${person.email}`} className="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
+            <Mail className="h-4 w-4" />
+            <span className="truncate">{person.email}</span>
+          </a>
+        ) : <span className="h-4 block"></span>}
+      </div>
     </div>
   );
 }
 
 // --- Reusable Alumni Group Section ---
-function AlumniGroup({ 
-  title, 
-  members, 
+function AlumniGroup({
+  title,
+  members,
   color = "slate",
   showAvatar = true // Default to showing avatar
-}: { 
-  title: string, 
-  members: any[], 
+}: {
+  title: string,
+  members: any[],
   color?: string,
   showAvatar?: boolean
 }) {
@@ -672,92 +672,92 @@ function AlumniGroup({
     <div>
       <h4 className="text-lg font-bold text-slate-700 mb-4 pl-3 border-l-4 border-slate-300">{title}</h4>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {members.map((person, idx) => (
-            <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4 h-full">
-              
-              {/* Only render Avatar if showAvatar is true */}
-              {showAvatar && (
-                <div className="mt-1">
-                  <AvatarPlaceholder name={person.name} size="sm" color={color} />
+        {members.map((person, idx) => (
+          <div key={idx} className="bg-white p-4 rounded-lg border border-slate-100 hover:border-slate-300 transition-colors flex items-start gap-4 h-full">
+
+            {/* Only render Avatar if showAvatar is true */}
+            {showAvatar && (
+              <div className="mt-1">
+                <AvatarPlaceholder name={person.name} size="sm" color={color} />
+              </div>
+            )}
+
+            <div className="flex-1 space-y-2">
+              <div>
+                <h4 className="font-bold text-slate-900">{person.name}</h4>
+                <p className="text-xs text-slate-500 mb-1">
+                  {person.role} {person.period && `(${person.period})`}
+                </p>
+
+                {person.badge && (
+                  <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
+                    {person.badge}
+                  </span>
+                )}
+              </div>
+
+              {/* --- Research Interests --- */}
+              {person.interests && (
+                <p className="text-xs text-slate-600">
+                  <strong className="text-slate-700">Research Interests:</strong> {person.interests}
+                </p>
+              )}
+
+              {/* --- Thesis Title --- */}
+              {person.thesis && (
+                <div className="flex items-start gap-2 text-xs text-slate-600 bg-slate-50 p-2 rounded border border-slate-100">
+                  <FileText className="h-3 w-3 mt-0.5 text-slate-400 flex-shrink-0" />
+                  <span className="leading-tight"><strong>Thesis:</strong> {person.thesis}</span>
                 </div>
               )}
 
-              <div className="flex-1 space-y-2">
-                <div>
-                    <h4 className="font-bold text-slate-900">{person.name}</h4>
-                    <p className="text-xs text-slate-500 mb-1">
-                        {person.role} {person.period && `(${person.period})`}
-                    </p>
-                    
-                    {person.badge && (
-                        <span className="inline-block px-1.5 py-0.5 bg-yellow-100 text-yellow-700 text-[10px] uppercase font-bold rounded mb-2">
-                        {person.badge}
-                        </span>
-                    )}
+              {/* --- Current Affiliation --- */}
+              {person.current && (
+                <div className="flex items-start gap-1.5 text-xs text-emerald-700 font-medium mt-1">
+                  <Briefcase className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                  <span>{person.current}</span>
                 </div>
+              )}
 
-                {/* --- Research Interests --- */}
-                {person.interests && (
-                   <p className="text-xs text-slate-600">
-                     <strong className="text-slate-700">Research Interests:</strong> {person.interests}
-                   </p>
-                )}
+              {/* --- Project (General) --- */}
+              {person.project && (
+                <div className="flex items-start gap-1.5 text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded">
+                  <BookOpen className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                  <span className="leading-tight">Project: {person.project}</span>
+                </div>
+              )}
 
-                {/* --- Thesis Title --- */}
-                {person.thesis && (
-                   <div className="flex items-start gap-2 text-xs text-slate-600 bg-slate-50 p-2 rounded border border-slate-100">
-                      <FileText className="h-3 w-3 mt-0.5 text-slate-400 flex-shrink-0" />
-                      <span className="leading-tight"><strong>Thesis:</strong> {person.thesis}</span>
-                   </div>
-                )}
+              {/* --- Email (Added Support) --- */}
+              {person.email && (
+                <a href={`mailto:${person.email}`} className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-600 mt-2 transition-colors">
+                  <Mail className="h-3 w-3 flex-shrink-0" />
+                  <span className="truncate">{person.email}</span>
+                </a>
+              )}
 
-                {/* --- Current Affiliation --- */}
-                {person.current && (
-                  <div className="flex items-start gap-1.5 text-xs text-emerald-700 font-medium mt-1">
-                      <Briefcase className="h-3 w-3 mt-0.5 flex-shrink-0" />
-                      <span>{person.current}</span>
+              {/* --- Publications (Single String) --- */}
+              {person.publication && (
+                <div className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
+                  <div className="flex gap-1.5">
+                    <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
+                    <span>{person.publication}</span>
                   </div>
-                )}
-                
-                {/* --- Project (General) --- */}
-                {person.project && (
-                  <div className="flex items-start gap-1.5 text-xs text-slate-600 mt-2 bg-slate-50 p-2 rounded">
-                      <BookOpen className="h-3 w-3 mt-0.5 flex-shrink-0" />
-                      <span className="leading-tight">Project: {person.project}</span>
+                </div>
+              )}
+
+              {/* --- Publications (Array) --- */}
+              {person.publications && person.publications.map((pub: string, pIdx: number) => (
+                <div key={pIdx} className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
+                  <div className="flex gap-1.5">
+                    <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
+                    <span>{pub}</span>
                   </div>
-                )}
+                </div>
+              ))}
 
-                {/* --- Email (Added Support) --- */}
-                {person.email && (
-                  <a href={`mailto:${person.email}`} className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-600 mt-2 transition-colors">
-                      <Mail className="h-3 w-3 flex-shrink-0" />
-                      <span className="truncate">{person.email}</span>
-                  </a>
-                )}
-
-                {/* --- Publications (Single String) --- */}
-                {person.publication && (
-                   <div className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
-                      <div className="flex gap-1.5">
-                         <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
-                         <span>{person.publication}</span>
-                      </div>
-                   </div>
-                )}
-
-                {/* --- Publications (Array) --- */}
-                {person.publications && person.publications.map((pub: string, pIdx: number) => (
-                   <div key={pIdx} className="text-[10px] text-slate-500 leading-normal border-t border-slate-100 pt-2 mt-2">
-                      <div className="flex gap-1.5">
-                         <PenTool className="h-3 w-3 flex-shrink-0 text-slate-400" />
-                         <span>{pub}</span>
-                      </div>
-                   </div>
-                ))}
-
-              </div>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     </div>
   );
