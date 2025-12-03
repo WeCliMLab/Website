@@ -195,7 +195,7 @@ const publicationsData = [
   {
     year: 2023,
     title: "Modeling and Monitoring Weather and Climate Characteristics of the Red Sea Region",
-    authors: "Hoteit, I., and Coauthors",
+    authors: "Hoteit, I., ..Attada,R...and Coauthors",
     journal: "Bull. Amer. Meteor. Soc.",
     doi: "https://doi.org/10.1175/BAMS-D-19-0005.A"
   },
@@ -281,7 +281,7 @@ const publicationsData = [
   {
     year: 2022,
     title: "Vertical Changes in the Storm Tracks and Dynamics of Western Disturbances.",
-    authors: "Rao, V. B., Pinheiro, H., Attada, R., Bhargavi, V. L., Ramakrishna, S. S. V. S., Govardhan, D., ... & KJ, R. ",
+    authors: "Rao, V. B., Pinheiro, H., Attada, R., Bhargavi, V. L., Ramakrishna, S. S. V. S., Govardhan, D., ... & KJ, Ramesh. ",
     journal: "VayuMandal",
     doi: "#"
   },
@@ -454,14 +454,14 @@ const publicationsData = [
 // --- HELPER: Detect Lab Members ---
 // List of names to highlight. These must match substrings in the authors string.
 const labMembers = [
-  "Attada, R.", "R. Attada", "Raju Attada", "Attada R", "Attada, R", "Attada",
+  "Attada, R.", "R. Attada", "Raju Attada", "Attada R", "Attada, R", "Attada", "Attada,R",
   "Shukla, K.K.", "K.K. Shukla", "Shukla, K. K.", "Shukla, K. K",
   "Govande, A.",
   "Athira, K. S.", "Athira, K.S.", "Athira,K.S.",
   "Saini, R.", "Saini, R", "Rohtash",
   "Kumari, A.",
-  "Nischal, S.", "Nischal", "Nischal.",
-  "Aggarwal, D.",
+  "Nischal, S.", "Nischal", "Nischal.","Sharma, N.",
+  "Aggarwal, D.","Aggarwal D",
   "Bajrang, C.",
   "Abhishek Kumar",
   "Pathaikara, A.", "Akash, P.", "Akash P",

@@ -83,20 +83,20 @@ export default function PeoplePage() {
         imageSrc: "/images/icons/research-gate.png",
         href: "https://www.researchgate.net/profile/Raju-Attada"
       },
-      {
-        name: "ORCID",
-        imageSrc: "/images/icons/orcid.png",
-        href: "https://orcid.org/0000-0002-6194-4561"
+      { 
+        name: "ORCID", 
+        imageSrc: "/images/icons/orcid.png", 
+        href: "https://orcid.org/" 
       },
-      {
-        name: "LinkedIn",
-        imageSrc: "/images/icons/linkedin.png",
-        href: "https://www.linkedin.com/in/raju-attada-b421b6a5/"
+      { 
+        name: "LinkedIn", 
+        imageSrc: "/images/icons/linkedin.png", 
+        href: "https://www.linkedin.com/" 
       },
-      {
-        name: "X (Twitter)",
-        imageSrc: "/images/icons/twitter.png",
-        href: "https://x.com/rajuattada1"
+      { 
+        name: "X (Twitter)", 
+        imageSrc: "/images/icons/x.png", 
+        href: "https://x.com/" 
       }
     ]
   };
