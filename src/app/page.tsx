@@ -292,7 +292,7 @@ export default function Home() {
         <div className="relative w-full overflow-hidden mask-gradient-sides">
           <div 
             className={`flex w-max animate-scroll-left hover:paused gap-6 pl-4 ${selectedNews ? '[animation-play-state:paused]' : ''}`}
-            style={{ animationDuration: '80s' }}
+            style={{ animationDuration: '200s' }}
           >
             {[...latestNews, ...latestNews].map((item, index) => {
                const showDetails = ['Publication', 'Workshop', 'Achievement', 'Media', 'Defense', 'Event', 'Award'].includes(item.category);
