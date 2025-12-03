@@ -187,6 +187,13 @@ const publicationsData = [
   // === 2023 ===
   {
     year: 2023,
+    title: "Characterization of a Regional Dust Storm Using RAMAN Lidar Over the Western Indian Region",
+    authors: "Shukla, K. K., Sharma, S. K., Kumar, K. N., Kumar, P., Kamat, D. K., Attada, R., & Saha, S.",
+    journal: " Journal of the Indian Society of Remote Sensing",
+    doi: "https://doi.org/10.1007/s12524-023-01778-x"
+  },
+  {
+    year: 2023,
     title: "Modeling and Monitoring Weather and Climate Characteristics of the Red Sea Region",
     authors: "Hoteit, I., and Coauthors",
     journal: "Bull. Amer. Meteor. Soc.",
@@ -229,6 +236,13 @@ const publicationsData = [
   },
   {
     year: 2023,
+    title: "Delving into Recent Changes in Precipitation Patterns over the Western Himalayas in a Global Warming Era",
+    authors: "Saini, R., Sharma, N., & Attada, R.",
+    journal: "Global Warming-A Concerning Component of Climate Change. IntechOpen.",
+    doi: "https://doi.org/10.5772/intechopen.1002028"
+  },
+  {
+    year: 2023,
     title: "Dust storm induced severe cooling in the northern Arabian Sea during winter 2022",
     authors: "Nukapothula, S., Yunus, A. P., Chen, C., Attada, R., & Narayana, A. C.",
     journal: "Deep Sea Research Part I",
@@ -266,6 +280,13 @@ const publicationsData = [
   },
   {
     year: 2022,
+    title: "Vertical Changes in the Storm Tracks and Dynamics of Western Disturbances.",
+    authors: "Rao, V. B., Pinheiro, H., Attada, R., Bhargavi, V. L., Ramakrishna, S. S. V. S., Govardhan, D., ... & KJ, R. ",
+    journal: "VayuMandal",
+    doi: "#"
+  },
+  {
+    year: 2022,
     title: "Numerical Simulation of Winter Precipitation over the Western Himalayas Using a Weather Research and Forecasting Model during 2001–2016",
     authors: "Punde P, Nischal, Attada R, Aggarwal D, Radhakrishnan C.",
     journal: "Climate",
@@ -287,13 +308,70 @@ const publicationsData = [
   },
   {
     year: 2022,
+    title: "Retrospective sub-seasonal forecasts of extreme precipitation events in the Arabian Peninsula using convective-permitting modeling",
+    authors: "Risanto, C. B., Chang, H. I., Luong, T. M., Dasari, H. P., Attada, R., Castro, C. L., & Hoteit, I.",
+    journal: "Climate Dynamics",
+    doi: "https://doi.org/10.1007/s00382-022-06336-8"
+  },
+  {
+    year: 2022,
     title: "Enhanced Simulation of the Indian Summer Monsoon Rainfall Using Regional Climate Modeling and Continuous Data Assimilation",
     authors: "Desamsetti, S., H. P. Dasari... R. Attada ...",
     journal: "Frontiers in Climate",
-    doi: "#"
+    doi: "https://doi.org/10.3389/fclim.2022.817076"
+  },
+  {
+    year: 2022,
+    title: "Understanding the spatiotemporal variability and trends of surface ozone over India",
+    authors: "Kunchala, R. K., Singh, B. B., Karumuri, R. K., Attada, R., Seelanki, V., & Kumar, K. N.",
+    journal: " Environmental Science and Pollution Research",
+    doi: "https://doi.org/10.1007/s11356-021-16011-w"
+  },
+  {
+    year: 2022,
+    title: "How reliable are Coupled Model Intercomparison Project Phase 6 models in representing the Asian summer monsoon anticyclone?",
+    authors: "Singh, B. B., Kondapalli, N. K., Seelanki, V., Karumuri, R. K., Attada, R., & Kunchala, R. K.",
+    journal: "International Journal of Climatology",
+    doi: " https://doi.org/10.1002/joc.7646"
+  },
+  {
+    year: 2022,
+    title: "Spatio-temporal variability of XCO2 over Indian region inferred from Orbiting Carbon Observatory (OCO-2) satellite and Chemistry Transport Model",
+    authors: "Kunchala, R. K., Patra, P. K., Kumar, K. N., Chandra, N., Attada, R., & Karumuri, R. K.",
+    journal: "Atmospheric Research",
+    doi: "https://doi.org/10.1016/j.atmosres.2022.106044"
+  },
+  {
+    year: 2022,
+    title: "Monsoon precipitation characteristics and extreme precipitation events over Northwest India using Indian high resolution regional reanalysis",
+    authors: "Aggarwal, D., Attada, R., Shukla, K. K., Chakraborty, R., & Kunchala, R. K.",
+    journal: "Atmospheric Research",
+    doi: "https://doi.org/10.1016/j.atmosres.2021.105993"
+  },
+  {
+    year: 2022,
+    title: "Meridional displacement of the Asian jet and its impact on Indian summer monsoon rainfall in observations and CFSv2 hindcast",
+    authors: "Chowdary, J. S., Vibhute, A. S., Darshana, P., Parekh, A., Gnanaseelan, C., & Attada, R.",
+    journal: "Climate Dynamics",
+    doi: "https://doi.org/10.1007/s00382-021-05935-1"
+  },
+  {
+    year: 2022,
+    title: "Characteristic dissimilarities during high aerosol loading days between western and eastern Indo-Gangetic Plain",
+    authors: "Shukla, K. K., Sarangi, C., Attada, R., & Kumar, P.",
+    journal: "Atmospheric Environment",
+    doi: "https://doi.org/10.1016/j.atmosenv.2021.118837"
+  },
+  {
+    year: 2022,
+    title: "Long-term changes in the Arabian Peninsula rainfall and their relationship with the ENSO signals in the tropical Indo-Pacific",
+    authors: "Dasari, H. P., Desamsetti, S., Langodan, S., Attada, R., Ashok, K., & Hoteit, I.",
+    journal: " Climate Dynamics",
+    doi: "https://doi.org/10.1007/s00382-021-06062-7"
   },
 
   // === 2021 (Selected) ===
+ 
   {
     year: 2021,
     title: "Representation of Arabian Peninsula Summer Climate in a Regional Atmospheric Model using Spectral Nudging",
@@ -308,6 +386,28 @@ const publicationsData = [
     journal: "Atmospheric Research",
     doi: "https://doi.org/10.1016/j.atmosres.2021.105613"
   },
+  {
+    year: 2021,
+    title: "Seasonal simulations of summer aerosol optical depth over the Arabian Peninsula using WRF-Chem: Validation, climatology, and variability",
+    authors: "Karumuri, R. K., Kunchala, R. K., Attada, R., Dasari, H. P., & Hoteit, I.",
+    journal: "International Journal of Climatology",
+    doi: " https://doi.org/10.1002/joc.7396"
+  },
+  {
+    year: 2021,
+    title: "On the understanding of surface ozone variability, its precursors and their associations with atmospheric conditions over the Delhi region",
+    authors: "Kunchala, R. K., Attada, R., Vellore, R. K., Soni, V. K., Mohan, M., & Chilukoti, N.",
+    journal: "Atmospheric Research",
+    doi: "https://doi.org/10.1016/j.atmosres.2021.105653"
+  },
+  {
+    year: 2021,
+    title: "Micro-Pulse Lidar observations of elevated aerosol layers over the Himalayan region",
+    authors: "Shukla, K. K., Phanikumar, D. V., Kumar, K. N., Kumar, A., Naja, M., Sharma, S., & Attada, R.",
+    journal: "Journal of Atmospheric and Solar-Terrestrial Physics",
+    doi: "https://doi.org/10.1016/j.jastp.2020.105526"
+  },
+  
 
   // === 2020 ===
   {
@@ -341,14 +441,14 @@ const publicationsData = [
     authors: "Raju Attada, Hari Prasad Dasari, Anant Parekh et al.",
     journal: "Climate Dynamics",
     doi: "https://doi.org/10.1007/s00382-018-4333-x"
+  },
+  {
+    year: 2018,
+    title: "Reanalysis of the Indian Summer Monsoon: Four-dimensional data assimilation of AIRS retrievals in a regional data assimilation and modeling framework",
+    authors: "Raju Attada, Anant Parekh, J. S. Chowdary and C.Gnanaseelan",
+    journal: "Climate Dynamics",
+    doi: "https://doi.org/10.1007/s00382-017-3781-z"
   }
-  // {
-  //   year: 2018,
-  //   title: "Reanalysis of the Indian Summer Monsoon: Four-dimensional data assimilation of AIRS retrievals in a regional data assimilation and modeling framework",
-  //   authors: "Raju Attada, Anant Parekh, J. S. Chowdary and C.Gnanaseelan",
-  //   journal: "Climate Dynamics",
-  //   doi: "https://doi.org/10.1007/s00382-017-3781-z"
-  // }
 ];
 
 // --- HELPER: Detect Lab Members ---
