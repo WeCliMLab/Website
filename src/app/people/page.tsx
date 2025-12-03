@@ -85,17 +85,17 @@ export default function PeoplePage() {
       { 
         name: "ORCID", 
         imageSrc: "/images/icons/orcid.png", 
-        href: "https://orcid.org/" 
+        href: "https://orcid.org/0000-0002-6194-4561" 
       },
       { 
         name: "LinkedIn", 
         imageSrc: "/images/icons/linkedin.png", 
-        href: "https://www.linkedin.com/" 
+        href: "https://www.linkedin.com/in/raju-attada-b421b6a5/" 
       },
       { 
         name: "X (Twitter)", 
-        imageSrc: "/images/icons/x.png", 
-        href: "https://x.com/" 
+        imageSrc: "/images/icons/twitter.png", 
+        href: "https://x.com/rajuattada1" 
       }
     ]
   };
@@ -114,9 +114,8 @@ export default function PeoplePage() {
       name: "Adil Muhammed I K",
       role: "PhD Scholar",
       period: "January 2025 - Present",
-      interests: "Extreme Rainfall Events, Data Assimilation",
-      email: "ph24087@iisermohali.ac.in",
-      image: ""
+      interests: "Extreme Rainfall Events, Data Assimilation, WRF",
+      email: "ph24087@iisermohali.ac.in"
     },
     {
       name: "Himanshu Pandey",
