@@ -54,7 +54,7 @@ export default function ResearchPage() {
     {
       title: "NWP and Data Assimilation",
       subtitle: "WRF Model, Regional Weather Forecasting, Extreme Weather Events",
-      <GitMerge className="h-5 w-5" />
+      icon: <GitMerge className="h-5 w-5" />
     }, 
     {
       title: "Aerosols & Dust Storms",
