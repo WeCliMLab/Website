@@ -23,6 +23,48 @@ import {
   ChevronRight
 } from 'lucide-react';
 
+// --- ANIMATED CHART COMPONENT ---
+// A reusable component to show a dummy data trend line
+const AnimatedTrendChart = () => {
+  return (
+    <div className="absolute top-1/3 left-0 w-full h-64 pointer-events-none opacity-30 mix-blend-screen">
+       {/* Dummy Data SVG Line Chart */}
+       <svg viewBox="0 0 1000 200" className="w-full h-full" preserveAspectRatio="none">
+          {/* Grid Lines */}
+          <line x1="0" y1="50" x2="1000" y2="50" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          <line x1="0" y1="100" x2="1000" y2="100" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          <line x1="0" y1="150" x2="1000" y2="150" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          
+          {/* Animated Trend Line (Path) */}
+          <path 
+            d="M0,180 Q100,160 200,170 T400,150 T600,100 T800,60 T1000,20" 
+            fill="none" 
+            stroke="url(#gradientLine)" 
+            strokeWidth="3"
+            className="animate-[draw_5s_ease-out_forwards]"
+            strokeDasharray="1200"
+            strokeDashoffset="1200"
+          />
+          
+          {/* Gradient Definition */}
+          <defs>
+            <linearGradient id="gradientLine" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#34d399" /> {/* emerald-400 */}
+              <stop offset="100%" stopColor="#f87171" /> {/* red-400 */}
+            </linearGradient>
+          </defs>
+       </svg>
+       
+       {/* Tailwind Custom Animation for Drawing Line */}
+       <style jsx>{`
+         @keyframes draw {
+           to { stroke-dashoffset: 0; }
+         }
+       `}</style>
+    </div>
+  );
+};
+
 export default function Home() {
   
   // --- STATE ---
@@ -74,7 +116,7 @@ export default function Home() {
       date: "14 Aug 2025",
       title: "PhD Defense: Dr. Rohtash",
       desc: "Hearty congratulations to Dr. Rohtash on successfully defending his Ph.D.",
-      details: "Dr. Rohtash successfully defended his thesis titled 'Precipitation Variability over the Western Himalayas'. His work provides crucial insights into the orographic controls on rainfall. The lab celebrated this milestone with a small gathering.",
+      details: "Dr. Rohtash successfully defended his thesis titled 'Precipitation Variability over the Western Himalayas'. His work provides crucial insights into the orographic controls on rainfall.",
       category: "Defense",
       icon: <GraduationCap className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
@@ -84,7 +126,7 @@ export default function Home() {
       date: "24 Mar 2025",
       title: "PhD Defense: Dr. Nischal Sharma",
       desc: "Hearty congratulations to Dr. Nischal Sharma on successfully defending her Ph.D.",
-      details: "Dr. Sharma's thesis focused on 'Winter Precipitation Extremes'. She utilized high-resolution WRF simulations to understand Western Disturbance interactions. She has now moved on to a Post-Doctoral position at the University of Reading, UK.",
+      details: "Dr. Sharma's thesis focused on 'Winter Precipitation Extremes'. She utilized high-resolution WRF simulations to understand Western Disturbance interactions.",
       category: "Defense",
       icon: <GraduationCap className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
@@ -94,7 +136,7 @@ export default function Home() {
       date: "28 Feb 2025",
       title: "India-UK Climate Action Summit",
       desc: "Ms. Ankita represented our lab as a panelist in 'Turning the Tide' session.",
-      details: "Ankita spoke about the role of youth in climate advocacy and the importance of bridging the gap between scientific modelling and policy making. The summit was held at ISB Mohali.",
+      details: "Ankita spoke about the role of youth in climate advocacy and the importance of bridging the gap between scientific modelling and policy making.",
       category: "Event",
       icon: <Mic className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
@@ -104,7 +146,7 @@ export default function Home() {
       date: "Dec 2024",
       title: "Paper in Weather Forecasting",
       desc: "Nischal's research paper published in the journal Weather Forecasting.",
-      details: "The paper, titled 'Multi-Physics Ensemble Framework for Representing Western Himalayan Precipitation', evaluates various WRF physics schemes. It establishes a benchmark configuration for future studies.",
+      details: "The paper, titled 'Multi-Physics Ensemble Framework for Representing Western Himalayan Precipitation', evaluates various WRF physics schemes.",
       category: "Publication",
       icon: <BookOpen className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
@@ -114,7 +156,7 @@ export default function Home() {
       date: "14-20 Oct 2024",
       title: "SURE-ALERT Training Programme",
       desc: "One week training on Rainfall-induced Landslide Early Warning Techniques.",
-      details: "The SURE-ALERT workshop trained 30 participants from across India on using satellite data and hydrological models to predict landslide triggers. Funded by ISRO.",
+      details: "The SURE-ALERT workshop trained 30 participants from across India on using satellite data and hydrological models to predict landslide triggers.",
       category: "Workshop",
       icon: <Layers className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
@@ -147,26 +189,6 @@ export default function Home() {
       details: "The award recognized her groundbreaking research on winter precipitation mechanisms. Presented by the Indian Meteorological Society, Kolkata Chapter.",
       category: "Award",
       icon: <Award className="h-4 w-4" />,
-      images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
-    },
-    {
-      id: 11,
-      date: "Feb 2024",
-      title: "Paper in QJRMS",
-      desc: "Nischal's research paper published in Quarterly Journal of the Royal Meteorological Society.",
-      details: "The paper explores the 'Underlying physical mechanisms of winter precipitation extremes over India’s high mountain region'.",
-      category: "Publication",
-      icon: <BookOpen className="h-4 w-4" />,
-      images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
-    },
-    {
-      id: 12,
-      date: "Jan 2024",
-      title: "Paper in Weather & Climate Extremes",
-      desc: "Athira's research paper published in WACE Journal.",
-      details: "The study classifies distinct cold wave patterns over North India and links them to Arctic teleconnections.",
-      category: "Publication",
-      icon: <BookOpen className="h-4 w-4" />,
       images: ["/images/highlights/highlights.jpg", "/images/highlights/highlights.jpg"]
     }
   ];
@@ -202,77 +224,102 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900 text-white">
-        {/* Animated Background Layers */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-emerald-900/30 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
-          <div className="absolute bottom-[-10%] right-[-20%] w-[800px] h-[800px] bg-teal-900/30 rounded-full blur-[120px] mix-blend-screen"></div>
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+      {/* ================= HERO SECTION (UPDATED) ================= */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        
+        {/* 1. Background Image with Dark Overlay */}
+        <div className="absolute inset-0 z-0">
+            <Image 
+                src="/images/homepage.gif" 
+                alt="WCMG Lab Research" 
+                fill 
+                className="object-cover"
+                priority
+                quality={100}
+            />
+            {/* Dark Gradient Overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-900/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 pb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 animate-fade-in-up flex flex-col justify-center">
-              <div className="inline-flex items-center space-x-2">
-                <span className="h-px w-8 bg-emerald-400"></span>
-                <span className="text-emerald-400 font-bold uppercase tracking-widest text-xs">
-                  Atmospheric & Climate Sciences
-                </span>
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                Simulating <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-emerald-100 to-teal-200">
-                  Earth's Systems.
-                </span>
-              </h1>
-              <p className="text-lg lg:text-xl text-slate-300 max-w-xl leading-relaxed">
-                From global circulation to local cloud dynamics. <br />
-                We integrate <b>high-resolution modelling</b>, <b>observation</b>, and <b>AI</b> to predict weather extremes and assess climate impacts for a resilient future.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-2">
-                <Link href="/research" className="group relative px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center">
-                  Explore Research
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link href="/contact" className="px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors backdrop-blur-sm">
-                  Join the Group
-                </Link>
-              </div>
-              <div className="mt-8 pt-8 border-t border-white/10 flex items-center gap-6">
-                <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Affiliated with:</p>
-                <div className="flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity">
-                  <div className="relative h-12 w-12 bg-white rounded-full p-0.5"><Image src="/images/iiserm.png" alt="IISER Mohali" fill className="object-cover rounded-full" /></div>
-                  <div className="relative h-12 w-12 bg-white rounded-full p-0.5"><Image src="/images/weclimb.png" alt="WeClimb Lab" fill className="object-cover rounded-full" /></div>
-                  <div className="flex flex-col"><span className="text-sm font-bold text-white leading-tight">IISER Mohali</span><span className="text-xs text-emerald-400">Dept. of Earth & Environmental Sciences</span></div>
+        {/* 2. Animated Chart Overlay (Background) */}
+        <AnimatedTrendChart />
+
+        {/* 3. Content Container (Centered for Cinematic Feel) */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+            
+            <div className="animate-fade-in-up space-y-8">
+                
+                {/* Lab Branding */}
+                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 font-bold uppercase tracking-widest text-xs mb-4">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    Weather & Climate Modelling Group
                 </div>
-              </div>
+
+                {/* Main Headline */}
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-lg">
+                    Simulating <br className="hidden md:block" />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-teal-100">
+                        Earth's Complex Systems
+                    </span>
+                </h1>
+                
+                {/* Sub-headline */}
+                <p className="text-lg md:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed font-light drop-shadow-md">
+                    Bridging high-resolution modelling, satellite observations, and AI to decode weather extremes and climate variability over the Indian subcontinent.
+                </p>
+
+                {/* Animated Stat Bar (New Addition for "Trends & Mitigation") */}
+                <div className="flex justify-center gap-8 py-6 opacity-80">
+                    <div className="flex flex-col items-center">
+                        <div className="h-16 w-1 bg-emerald-500/30 rounded-full overflow-hidden relative">
+                            <div className="absolute bottom-0 w-full bg-emerald-400 animate-[grow_2s_ease-out_forwards]" style={{ height: '70%' }}></div>
+                        </div>
+                        <span className="text-xs text-emerald-200 mt-2 font-mono">Mitigation</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="h-16 w-1 bg-red-500/30 rounded-full overflow-hidden relative">
+                            <div className="absolute bottom-0 w-full bg-red-400 animate-[grow_2s_ease-out_forwards_0.5s]" style={{ height: '90%' }}></div>
+                        </div>
+                        <span className="text-xs text-red-200 mt-2 font-mono">Warming</span>
+                    </div>
+                    <style jsx>{`
+                        @keyframes grow { from { height: 0; } }
+                    `}</style>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <Link 
+                        href="/research" 
+                        className="group relative px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-full transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] flex items-center justify-center"
+                    >
+                        Explore Research
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link 
+                        href="/contact" 
+                        className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-full transition-all backdrop-blur-sm"
+                    >
+                        Join Our Group
+                    </Link>
+                </div>
+
+                {/* Affiliation Badges */}
+                <div className="pt-12 flex justify-center items-center opacity-90 hover:opacity-100 transition-opacity">
+                    <div className="flex items-center gap-4 bg-black/30 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/10">
+                        <div className="relative h-10 w-10">
+                            <Image src="/images/iiserm.png" alt="IISER" fill className="object-contain" />
+                        </div>
+                        <div className="h-8 w-px bg-white/20"></div>
+                        <div className="text-left">
+                            <p className="text-xs text-emerald-300 font-bold uppercase tracking-wider">Affiliated with</p>
+                            <p className="text-sm font-bold text-white">IISER Mohali</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            {/* Visual Abstract */}
-            <div className="hidden lg:block relative h-[600px] w-full">
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-white/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] border border-dashed border-emerald-500/20 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
-               <div className="absolute top-20 right-0 w-80 bg-slate-800/60 backdrop-blur-xl border border-white/10 rounded-xl p-5 shadow-2xl animate-float">
-                  <div className="flex items-center gap-2 mb-4 border-b border-white/10 pb-2">
-                     <Layers className="h-4 w-4 text-emerald-400" />
-                     <span className="text-xs font-mono text-emerald-100">WRF_MODEL_V4.0_OUTPUT</span>
-                  </div>
-                  <div className="relative h-32 w-full overflow-hidden rounded bg-slate-900/50 mb-3">
-                     <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_50%_120%,rgba(16,185,129,0.8),transparent)]"></div>
-                  </div>
-                  <div className="flex justify-between text-xs font-mono text-slate-400">
-                     <span>Res: 3km</span><span>Domain: Western Himalayas</span>
-                  </div>
-               </div>
-               <div className="absolute bottom-20 left-10 w-72 bg-slate-800/60 backdrop-blur-xl border border-white/10 rounded-xl p-5 shadow-2xl animate-float-delayed">
-                  <div className="flex items-center gap-2 mb-4 border-b border-white/10 pb-2">
-                     <Cpu className="h-4 w-4 text-teal-400" />
-                     <span className="text-xs font-mono text-teal-100">DEEP_LEARNING</span>
-                  </div>
-                  <div className="text-xs font-mono text-slate-400 mt-2">Optimizing Weights... <span className="text-green-400">98%</span></div>
-               </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -292,7 +339,7 @@ export default function Home() {
         <div className="relative w-full overflow-hidden mask-gradient-sides">
           <div 
             className={`flex w-max animate-scroll-left hover:paused gap-6 pl-4 ${selectedNews ? '[animation-play-state:paused]' : ''}`}
-            style={{ animationDuration: '200s' }}
+            style={{ animationDuration: '80s' }}
           >
             {[...latestNews, ...latestNews].map((item, index) => {
                const showDetails = ['Publication', 'Workshop', 'Achievement', 'Media', 'Defense', 'Event', 'Award'].includes(item.category);
