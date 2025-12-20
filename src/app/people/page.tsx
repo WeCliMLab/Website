@@ -121,7 +121,7 @@ export default function PeoplePage() {
       name: "Himanshu Pandey",
       role: "PhD Scholar",
       period: "August 2025 - Present",
-      interests: "Extreme Events, Moisture Transport, Himalayan Climatology" 
+      interests: "Extreme Events, Moisture Transport, Himalayan Climatology", 
       email: "ph25058@iisermohali.ac.in",
       image: ""
     }
